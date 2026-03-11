@@ -1,0 +1,738 @@
+:root {
+  --lord-gold-100: #fcce6d;
+  --lord-gold-200: #fbc44f;
+  --lord-gold-300: #fbbc36;
+  --lord-gold-400: #faaf12;
+  --lord-gold-500: #de9804;
+  --lord-gold-flat: #fbbc36;
+  --lord-gold-gradient: linear-gradient(
+    118deg,
+    var(--lord-gold-100) 0%,
+    var(--lord-gold-200) 24%,
+    var(--lord-gold-300) 48%,
+    var(--lord-gold-400) 74%,
+    var(--lord-gold-500) 100%
+  );
+  --lord-gold-gradient-soft: linear-gradient(
+    180deg,
+    #fcce6d 0%,
+    #fbbc36 52%,
+    #de9804 100%
+  );
+  --lord-gold-glow-soft: 0 0 0 1px rgba(251, 188, 54, 0.34), 0 8px 18px rgba(222, 152, 4, 0.24);
+  --lord-gold-glow-strong: 0 0 0 1px rgba(251, 188, 54, 0.5), 0 10px 24px rgba(222, 152, 4, 0.3), 0 0 14px rgba(252, 206, 109, 0.18);
+}
+
+@keyframes lordGoldFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Shared gold contract for custom pages */
+body.page-love,
+body.theme-schastye,
+body.theme-radost {
+  --gold-1: var(--lord-gold-100);
+  --gold-2: var(--lord-gold-200);
+  --gold-3: var(--lord-gold-300);
+  --gold-4: var(--lord-gold-400);
+  --gold-5: var(--lord-gold-500);
+  --gold-gradient: var(--lord-gold-gradient);
+  --gold-glow-soft: var(--lord-gold-glow-soft);
+  --gold-glow-strong: var(--lord-gold-glow-strong);
+}
+
+body.page-love .main-header-clone,
+body.theme-schastye .main-header-clone,
+body.theme-radost .main-header-clone {
+  --clone-accent: var(--lord-gold-300);
+  --clone-brand-gradient: var(--lord-gold-gradient);
+  --clone-cta-bg: var(--lord-gold-gradient);
+}
+
+/* Main LORD (Tilda) yellow -> standard gold */
+#allrecords #rec1841231093 .brand-home-small,
+#allrecords #rec1841231093 .brand-home-big,
+#allrecords #rec1841231093 .t-menu-base__textlogo,
+#allrecords #rec1841231093 .t-btnflex_type_button .t-btnflex__text,
+#allrecords #rec1841231093 .t-btnflex_type_button .t-btntext__text {
+  background-image: var(--lord-gold-gradient) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  animation: lordGoldFlow 6.4s ease-in-out infinite alternate;
+}
+
+#allrecords #rec1841231093 .t-menu__link-item,
+#allrecords #rec1841231093 a.t-menusub__link-item,
+#allrecords #rec1841231093 .t-menu-burger__text {
+  color: var(--lord-gold-300) !important;
+}
+
+#allrecords #rec1841231093 .t-menu__link-item.t-active:not(.t978__menu-link) {
+  color: var(--lord-gold-200) !important;
+}
+
+#allrecords #rec1841231093 .t-menu__link-item:not(.t-active):not(.tooltipstered):hover,
+#allrecords #rec1841231093 .t-menu__link-item:not(.t-active):not(.tooltipstered):focus-visible {
+  color: var(--lord-gold-100) !important;
+}
+
+#allrecords #rec1841231093 .t-menu__link-item:not(.t-active):not(.tooltipstered)::after {
+  box-shadow: inset 0 -1px 0 0 rgba(243, 205, 105, 0.95) !important;
+}
+
+#allrecords #rec1841231093 .t-menu-burger__icon span {
+  background: var(--lord-gold-gradient-soft) !important;
+}
+
+#allrecords #rec1841231093 .t-menu-burger {
+  border-color: var(--lord-gold-300) !important;
+}
+
+#allrecords #rec1841231093 .t-btnflex.t-btnflex_type_button {
+  box-shadow: 0 0 0 1px rgba(230, 187, 78, 0.45), 0 10px 22px rgba(194, 136, 42, 0.3) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #allrecords #rec1841231093 .brand-home-small,
+  #allrecords #rec1841231093 .brand-home-big,
+  #allrecords #rec1841231093 .t-menu-base__textlogo,
+  #allrecords #rec1841231093 .t-btnflex_type_button .t-btnflex__text,
+  #allrecords #rec1841231093 .t-btnflex_type_button .t-btntext__text {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Global Liquid Glass + Mac Corners v28
+   ========================================================================== */
+:root {
+  --lord-mac-radius-xl: 28px;
+  --lord-mac-radius-lg: 24px;
+  --lord-mac-radius-md: 20px;
+  --lord-liquid-tint: rgba(255, 255, 255, 0.12);
+  --lord-liquid-tint-strong: rgba(255, 255, 255, 0.18);
+  --lord-liquid-border: rgba(255, 255, 255, 0.28);
+  --lord-liquid-border-soft: rgba(255, 255, 255, 0.18);
+  --lord-liquid-shadow: 0 14px 34px rgba(5, 10, 32, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+body.page-love :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
+body.theme-schastye :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
+body.theme-radost :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
+#allrecords :where(
+  .t-menu-base__maincontainer,
+  .t-col,
+  .t-form__inputsbox,
+  .t-input-block
+) {
+  border-radius: var(--lord-mac-radius-lg) !important;
+  background-color: var(--lord-liquid-tint) !important;
+  border: 1px solid var(--lord-liquid-border-soft) !important;
+  box-shadow: var(--lord-liquid-shadow) !important;
+  backdrop-filter: blur(14px) saturate(145%);
+  -webkit-backdrop-filter: blur(14px) saturate(145%);
+}
+
+body.page-love :where(
+  .btn,
+  details.write-menu > summary,
+  .menu-toggle,
+  .t-btn,
+  .t-btnflex.t-btnflex_type_button
+),
+body.theme-schastye :where(
+  .btn,
+  details.write-menu > summary,
+  .menu-toggle,
+  .t-btn,
+  .t-btnflex.t-btnflex_type_button
+),
+body.theme-radost :where(
+  .btn,
+  details.write-menu > summary,
+  .menu-toggle,
+  .t-btn,
+  .t-btnflex.t-btnflex_type_button
+),
+#allrecords :where(
+  .t-btn,
+  .t-btnflex.t-btnflex_type_button,
+  .t-menu-burger
+) {
+  border-radius: var(--lord-mac-radius-md) !important;
+  border: 1px solid var(--lord-liquid-border) !important;
+  box-shadow: var(--lord-liquid-shadow) !important;
+  backdrop-filter: blur(14px) saturate(145%);
+  -webkit-backdrop-filter: blur(14px) saturate(145%);
+}
+
+body.page-love :where(
+  [class*="-frame"],
+  [class*="-photo"],
+  [class*="-media"],
+  .section-photo,
+  .case-media,
+  .alexey-project-shot
+),
+body.theme-schastye :where(
+  [class*="-frame"],
+  [class*="-photo"],
+  [class*="-media"],
+  .section-photo,
+  .case-media,
+  .alexey-project-shot
+),
+body.theme-radost :where(
+  [class*="-frame"],
+  [class*="-photo"],
+  [class*="-media"],
+  .section-photo,
+  .case-media,
+  .alexey-project-shot
+),
+#allrecords :where(
+  .t-bgimg,
+  .t-cover__carrier,
+  .t-cover__wrapper,
+  .t-slds__item,
+  .t-slds__bgimg
+) {
+  border-radius: var(--lord-mac-radius-xl) !important;
+  overflow: hidden !important;
+}
+
+#allrecords .r.t-rec:not(#rec1821410183):not(#rec1841231093) {
+  position: relative;
+  border-radius: var(--lord-mac-radius-xl);
+  isolation: isolate;
+}
+
+#allrecords .r.t-rec:not(#rec1821410183):not(#rec1841231093)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 960px) {
+  :root {
+    --lord-mac-radius-xl: 22px;
+    --lord-mac-radius-lg: 18px;
+    --lord-mac-radius-md: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-love :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn
+  ),
+  body.theme-schastye :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn
+  ),
+  body.theme-radost :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn
+  ),
+  #allrecords :where(
+    .t-menu-base__maincontainer,
+    .t-col,
+    .t-form__inputsbox,
+    .t-input-block
+  ) {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* ==========================================================================
+   Liquid Glass Pro Polish v29
+   ========================================================================== */
+:root {
+  --lord-liquid-blur: 16px;
+  --lord-liquid-sat: 152%;
+  --lord-liquid-bright: 1.05;
+  --lord-liquid-fallback: rgba(18, 28, 64, 0.72);
+  --lord-liquid-fallback-soft: rgba(18, 28, 64, 0.58);
+}
+
+body.page-love :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
+body.theme-schastye :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
+body.theme-radost :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
+#allrecords :where(
+  .t-menu-base__maincontainer,
+  .t-col,
+  .t-form__inputsbox,
+  .t-input-block
+) {
+  background-image:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.12) 28%, rgba(255, 255, 255, 0.05) 100%),
+    linear-gradient(150deg, rgba(0, 0, 0, 0) 55%, rgba(8, 16, 44, 0.12) 100%) !important;
+  backdrop-filter: blur(var(--lord-liquid-blur)) saturate(var(--lord-liquid-sat)) brightness(var(--lord-liquid-bright));
+  -webkit-backdrop-filter: blur(var(--lord-liquid-blur)) saturate(var(--lord-liquid-sat)) brightness(var(--lord-liquid-bright));
+}
+
+body.page-love :where(
+  input,
+  select,
+  textarea,
+  .t-input,
+  .t-inputtext
+),
+body.theme-schastye :where(
+  input,
+  select,
+  textarea,
+  .t-input,
+  .t-inputtext
+),
+body.theme-radost :where(
+  input,
+  select,
+  textarea,
+  .t-input,
+  .t-inputtext
+) {
+  border-radius: var(--lord-mac-radius-md) !important;
+  border: 1px solid rgba(255, 255, 255, 0.26) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 8px 20px rgba(8, 15, 40, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.page-love :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
+  body.theme-schastye :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
+  body.theme-radost :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
+  #allrecords :where(.t-btn, .t-btnflex.t-btnflex_type_button, .t-menu-burger) {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  body.page-love :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
+  body.theme-schastye :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
+  body.theme-radost :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
+  #allrecords :where(.t-btn, .t-btnflex.t-btnflex_type_button, .t-menu-burger):hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.44) !important;
+    box-shadow: 0 12px 28px rgba(8, 16, 42, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.34) !important;
+  }
+}
+
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  body.page-love :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .write-menu-panel,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn,
+    .main-header-clone .header-row
+  ),
+  body.theme-schastye :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .write-menu-panel,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn,
+    .main-header-clone .header-row
+  ),
+  body.theme-radost :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .write-menu-panel,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn,
+    .main-header-clone .header-row
+  ),
+  #allrecords :where(
+    .t-menu-base__maincontainer,
+    .t-col,
+    .t-form__inputsbox,
+    .t-input-block
+  ) {
+    background-color: var(--lord-liquid-fallback) !important;
+    background-image: linear-gradient(160deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08)) !important;
+  }
+
+  body.page-love :where(input, select, textarea, .t-input, .t-inputtext),
+  body.theme-schastye :where(input, select, textarea, .t-input, .t-inputtext),
+  body.theme-radost :where(input, select, textarea, .t-input, .t-inputtext) {
+    background-color: var(--lord-liquid-fallback-soft) !important;
+  }
+}
+
+@media (max-width: 960px) {
+  :root {
+    --lord-liquid-blur: 11px;
+  }
+}
+
+/* ==========================================================================
+   Global Dark Blue + Dark Red Atmosphere v31
+   ========================================================================== */
+:root {
+  --lord-bg-base: #070d1d;
+  --lord-bg-blue-deep: #091432;
+  --lord-bg-blue: #10255a;
+  --lord-bg-red: #3c1120;
+  --lord-bg-red-deep: #5a1a2f;
+  --lord-bg-violet: #231a47;
+}
+
+@keyframes lordGradientFlowV31 {
+  0% {
+    background-position: 0% 50%, 100% 50%, 18% 24%, 84% 76%, 52% 34%;
+  }
+  100% {
+    background-position: 100% 50%, 0% 50%, 24% 18%, 78% 82%, 58% 40%;
+  }
+}
+
+body.page-love,
+body.theme-schastye,
+body.theme-radost,
+body.t-body {
+  background-color: var(--lord-bg-base) !important;
+  background-image:
+    linear-gradient(96deg, var(--lord-bg-blue-deep) 0%, var(--lord-bg-blue) 56%, var(--lord-bg-red) 100%),
+    linear-gradient(266deg, rgba(88, 26, 47, 0.56) 0%, rgba(18, 38, 92, 0.55) 100%),
+    radial-gradient(circle at 16% 22%, rgba(132, 42, 70, 0.28), rgba(132, 42, 70, 0) 36%),
+    radial-gradient(circle at 82% 72%, rgba(73, 114, 214, 0.26), rgba(73, 114, 214, 0) 42%),
+    radial-gradient(circle at 50% 38%, rgba(60, 30, 102, 0.26), rgba(60, 30, 102, 0) 34%) !important;
+  background-size: 160% 160%, 170% 170%, 120% 120%, 130% 130%, 130% 130%;
+  animation: lordGradientFlowV31 30s ease-in-out infinite alternate;
+}
+
+#allrecords {
+  background: transparent !important;
+}
+
+body.page-love :where(.section, .page-footer),
+body.theme-schastye :where(.section, .page-footer),
+body.theme-radost :where(.section, .page-footer) {
+  background-color: transparent !important;
+}
+
+body.page-love :where(.hero::after, .hero-flow-fade),
+body.theme-schastye :where(.hero::after, .hero-flow-fade),
+body.theme-radost :where(.joy-hero::after, .joy-hero-flow-fade) {
+  background-image:
+    linear-gradient(108deg, rgba(9, 16, 40, 0.8) 0%, rgba(13, 20, 56, 0.62) 42%, rgba(23, 38, 86, 0.52) 66%, rgba(66, 20, 42, 0.68) 100%) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-love,
+  body.theme-schastye,
+  body.theme-radost,
+  body.t-body {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Radost Background Sync with Loader v32
+   ========================================================================== */
+@keyframes lordRadostLoaderFlowV32 {
+  0% {
+    background-position: 12% 18%, 86% 20%, 52% 78%, 0% 50%;
+  }
+  100% {
+    background-position: 18% 24%, 80% 14%, 46% 84%, 100% 50%;
+  }
+}
+
+body.theme-radost.radost-v4 {
+  background-color: #061544 !important;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(0, 229, 255, 0.28), rgba(0, 229, 255, 0) 46%),
+    radial-gradient(circle at 86% 20%, rgba(255, 61, 222, 0.26), rgba(255, 61, 222, 0) 52%),
+    radial-gradient(circle at 52% 78%, rgba(45, 110, 255, 0.16), rgba(45, 110, 255, 0) 48%),
+    linear-gradient(96deg, #061544 0%, #12439f 36%, #4b2a9f 67%, #972f98 100%) !important;
+  background-size: 150% 150%, 150% 150%, 170% 170%, 140% 140% !important;
+  animation: lordRadostLoaderFlowV32 22s ease-in-out infinite alternate !important;
+}
+
+body.theme-radost.radost-v4 :where(.joy-hero::after, .joy-hero-flow-fade) {
+  background-image:
+    linear-gradient(108deg, rgba(4, 14, 46, 0.58) 0%, rgba(10, 28, 80, 0.48) 42%, rgba(43, 24, 96, 0.46) 68%, rgba(116, 30, 118, 0.52) 100%) !important;
+}
+
+body.theme-radost.radost-v4 .site-backdrop {
+  opacity: 0.62 !important;
+  filter: saturate(1.28) !important;
+}
+
+body.theme-radost.radost-v4 .blob-a {
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.46), rgba(0, 229, 255, 0.04) 72%) !important;
+}
+
+body.theme-radost.radost-v4 .blob-b {
+  background: radial-gradient(circle, rgba(255, 61, 222, 0.38), rgba(255, 61, 222, 0.04) 72%) !important;
+}
+
+body.theme-radost.radost-v4 .blob-c {
+  background: radial-gradient(circle, rgba(95, 142, 255, 0.34), rgba(95, 142, 255, 0.03) 74%) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-radost.radost-v4 {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Radost Wow Photo Clarity v33
+   ========================================================================== */
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card {
+  background: #081338 !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  box-shadow:
+    0 14px 30px rgba(2, 8, 28, 0.44),
+    inset 0 0 0 1px rgba(132, 218, 255, 0.26) !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card > img {
+  transform: none !important;
+  filter: none !important;
+  image-rendering: auto !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card::after {
+  background:
+    linear-gradient(180deg, rgba(4, 10, 28, 0.02) 0%, rgba(4, 10, 28, 0.44) 64%, rgba(4, 10, 28, 0.72) 100%) !important;
+}
+
+@media (hover: hover) {
+  body.theme-radost.radost-v4 #wow-options .joy-wow-media-card:hover > img {
+    transform: scale(1.03) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-radost.radost-v4 #wow-options .joy-wow-media-card > img {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   Radost Visual Rebalance v34
+   ========================================================================== */
+@keyframes lordRadostLoaderFlowV34 {
+  0% {
+    background-position: 10% 18%, 86% 20%, 72% 68%, 50% 80%, 0% 50%;
+  }
+  100% {
+    background-position: 16% 22%, 80% 16%, 76% 74%, 44% 84%, 100% 50%;
+  }
+}
+
+body.theme-radost.radost-v4 {
+  background-color: #050f32 !important;
+  background-image:
+    radial-gradient(circle at 10% 18%, rgba(0, 229, 255, 0.24), rgba(0, 229, 255, 0) 45%),
+    radial-gradient(circle at 88% 20%, rgba(255, 61, 222, 0.34), rgba(255, 61, 222, 0) 54%),
+    radial-gradient(circle at 72% 68%, rgba(255, 96, 209, 0.14), rgba(255, 96, 209, 0) 50%),
+    radial-gradient(circle at 50% 80%, rgba(59, 116, 255, 0.16), rgba(59, 116, 255, 0) 52%),
+    linear-gradient(98deg, #050f32 0%, #0a2870 34%, #332994 60%, #742d9b 83%, #ad329d 100%) !important;
+  background-size: 160% 160%, 158% 158%, 170% 170%, 170% 170%, 145% 145% !important;
+  animation: lordRadostLoaderFlowV34 24s ease-in-out infinite alternate !important;
+}
+
+body.theme-radost.radost-v4 :where(.joy-hero::after, .joy-hero-flow-fade) {
+  background-image:
+    linear-gradient(108deg, rgba(6, 16, 52, 0.44) 0%, rgba(10, 28, 82, 0.36) 43%, rgba(41, 23, 96, 0.36) 68%, rgba(128, 38, 132, 0.42) 100%) !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card::before {
+  display: none !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card::after {
+  background:
+    linear-gradient(180deg, rgba(4, 10, 28, 0.01) 0%, rgba(4, 10, 28, 0.34) 60%, rgba(4, 10, 28, 0.56) 100%) !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card > img {
+  transform: translateZ(0) !important;
+  filter: none !important;
+  image-rendering: auto !important;
+}
+
+@media (hover: hover) {
+  body.theme-radost.radost-v4 #wow-options .joy-wow-media-card:hover > img {
+    transform: scale(1.02) translateZ(0) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-radost.radost-v4 {
+    animation: none !important;
+  }
+
+  body.theme-radost.radost-v4 #wow-options .joy-wow-media-card > img {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   Radost Wow Photos Pure v35
+   ========================================================================== */
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card,
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card * {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card::before,
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-media-card > img {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  object-fit: cover !important;
+  image-rendering: auto !important;
+  mix-blend-mode: normal !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-card-content {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+body.theme-radost.radost-v4 #wow-options .joy-wow-card-content h3,
+body.theme-radost.radost-v4 #wow-options .joy-wow-card-content p {
+  display: inline-block;
+  margin: 0 0 0.18rem;
+  padding: 0.14em 0.42em;
+  border-radius: 8px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background: rgba(4, 10, 28, 0.72);
+  color: #eef4ff !important;
+  line-height: 1.35;
+}
+
+@media (hover: hover) {
+  body.theme-radost.radost-v4 #wow-options .joy-wow-media-card:hover > img {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   Radost Hero Start Alignment v37
+   ========================================================================== */
+body.theme-radost.radost-v4 .breadcrumbs {
+  display: none !important;
+}
+
+body.theme-radost.radost-v4 .joy-hero {
+  margin-top: clamp(-0.9rem, -2vw, -0.4rem) !important;
+}

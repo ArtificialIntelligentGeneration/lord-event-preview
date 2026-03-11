@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.session
+*.session-journal
+__pycache__/
+.DS_Store
+.playwright/
+.playwright-cli/
+.wrangler/
+node_modules/
+tmp/
+output/playwright/

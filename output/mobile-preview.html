@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LORD Mobile Preview</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #efe6d6;
+      --panel: rgba(255, 252, 246, 0.82);
+      --ink: #17120c;
+      --muted: #6b6259;
+      --line: rgba(23, 18, 12, 0.12);
+      --accent: #b0702f;
+      --accent-strong: #8f5318;
+      --phone: #1d1a18;
+      --shadow: 0 24px 60px rgba(31, 24, 18, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "SF Pro Display", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 36%),
+        linear-gradient(160deg, #f8f2e8 0%, #ead9c0 48%, #e2cfb4 100%);
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 40px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar {
+      padding: 24px 24px 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+    }
+
+    .note {
+      margin: 0;
+      max-width: 760px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .controls {
+      padding: 0 24px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .tab,
+    .link-chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--ink);
+      text-decoration: none;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+    }
+
+    .tab:hover,
+    .tab:focus-visible,
+    .link-chip:hover,
+    .link-chip:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(23, 18, 12, 0.24);
+      outline: none;
+    }
+
+    .tab.is-active {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .stage {
+      padding: 0 24px 24px;
+      display: grid;
+      grid-template-columns: minmax(300px, 390px) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .phone {
+      padding: 14px;
+      border-radius: 38px;
+      background:
+        linear-gradient(160deg, #2c2824 0%, #111 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.14),
+        0 30px 80px rgba(17, 17, 17, 0.38);
+    }
+
+    .phone-head {
+      width: 140px;
+      height: 28px;
+      margin: 0 auto 12px;
+      border-radius: 18px;
+      background: rgba(0, 0, 0, 0.78);
+    }
+
+    .phone-screen {
+      aspect-ratio: 390 / 844;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #fff;
+    }
+
+    .meta {
+      padding: 18px 20px;
+      display: grid;
+      gap: 14px;
+      min-height: 100%;
+    }
+
+    .meta-card {
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--line);
+    }
+
+    .meta-label {
+      margin: 0 0 8px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .meta-value {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink);
+      word-break: break-word;
+    }
+
+    .meta-value code {
+      font-family: ui-monospace, "SFMono-Regular", monospace;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .stage {
+        grid-template-columns: 1fr;
+      }
+
+      .phone {
+        max-width: 390px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="panel">
+      <div class="topbar">
+        <p class="eyebrow">Local preview</p>
+        <h1>LORD mobile pages in one view</h1>
+        <p class="note">
+          Open this file in Cursor preview and keep the local server running on
+          <code>http://127.0.0.1:8000</code>. Tabs switch the iframe between the mobile entry pages.
+        </p>
+      </div>
+
+      <div class="controls">
+        <button class="tab is-active" type="button" data-src="http://127.0.0.1:8000/mobile/versions/v2/index.html">Main</button>
+        <button class="tab" type="button" data-src="http://127.0.0.1:8000/mobile/versions/v1/schastye/index.html">Schastye</button>
+        <button class="tab" type="button" data-src="http://127.0.0.1:8000/mobile/versions/v1/love/index.html">Love</button>
+        <button class="tab" type="button" data-src="http://127.0.0.1:8000/mobile/versions/v1/radost/index.html">Radost</button>
+        <a class="link-chip" href="http://127.0.0.1:8000/mobile/versions/v2/index.html" target="_blank" rel="noreferrer">Open direct URL</a>
+      </div>
+
+      <div class="stage">
+        <div class="phone">
+          <div class="phone-head" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <iframe
+              id="preview-frame"
+              title="LORD mobile preview"
+              src="http://127.0.0.1:8000/mobile/versions/v2/index.html"
+              loading="eager"
+            ></iframe>
+          </div>
+        </div>
+
+        <aside class="meta">
+          <section class="meta-card">
+            <p class="meta-label">Current frame URL</p>
+            <p class="meta-value"><code id="current-url">http://127.0.0.1:8000/mobile/versions/v2/index.html</code></p>
+          </section>
+
+          <section class="meta-card">
+            <p class="meta-label">How to use</p>
+            <p class="meta-value">
+              1. Keep the local server alive.<br />
+              2. Open this file in Cursor preview.<br />
+              3. Switch between mobile pages with the tabs above.
+            </p>
+          </section>
+
+          <section class="meta-card">
+            <p class="meta-label">Fallback</p>
+            <p class="meta-value">
+              If iframe preview is blocked in your panel, open the direct local URL above or this live route:
+              <a href="https://lord-event.ru/?view=mobile" target="_blank" rel="noreferrer">https://lord-event.ru/?view=mobile</a>
+            </p>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const frame = document.getElementById("preview-frame");
+    const currentUrl = document.getElementById("current-url");
+    const tabs = Array.from(document.querySelectorAll(".tab"));
+
+    const setActiveTab = (button) => {
+      tabs.forEach((tab) => tab.classList.toggle("is-active", tab === button));
+      const src = button.dataset.src;
+      frame.src = src;
+      currentUrl.textContent = src;
+    };
+
+    tabs.forEach((button) => {
+      button.addEventListener("click", () => setActiveTab(button));
+    });
+  </script>
+</body>
+</html>

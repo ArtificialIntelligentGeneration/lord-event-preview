@@ -1,0 +1,1618 @@
+/* ==========================================================================
+   Main Header Clone (Inner Pages)
+   Pixel-close clone of #rec1841231093 from main page.
+   ========================================================================== */
+
+body.page-love .main-header-clone,
+body.theme-schastye .main-header-clone,
+body.theme-radost .main-header-clone,
+body.theme-radost.radost-v2 .main-header-clone {
+  --clone-shell-bg: linear-gradient(120deg, rgba(3, 18, 66, 0.98) 0%, rgba(8, 35, 102, 0.95) 45%, rgba(3, 18, 66, 0.98) 100%);
+  --clone-shell-border: rgba(255, 216, 99, 0.28);
+  --clone-shell-shadow:
+    0 12px 34px rgba(0, 6, 28, 0.48),
+    inset 0 0 0 1px rgba(255, 216, 99, 0.14);
+  --clone-link: #f5d787;
+  --clone-link-hover: #ffe9b1;
+  --clone-link-active-bg: rgba(255, 229, 161, 0.14);
+  --clone-link-active-border: rgba(255, 230, 173, 0.38);
+  --clone-cta-bg: linear-gradient(112deg, #fff6d8 0%, #f3d27d 34%, #d8a84f 72%, #aa7123 100%);
+  --clone-cta-text: #142b66;
+  --clone-mobile-bg: rgba(246, 238, 224, 0.99);
+  position: sticky !important;
+  top: 10px !important;
+  z-index: 64 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+}
+
+body.page-love .main-header-clone::before,
+body.page-love .main-header-clone::after,
+body.theme-schastye .main-header-clone::before,
+body.theme-schastye .main-header-clone::after,
+body.theme-radost .main-header-clone::before,
+body.theme-radost .main-header-clone::after,
+body.theme-radost.radost-v2 .main-header-clone::before,
+body.theme-radost.radost-v2 .main-header-clone::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .container,
+body.theme-schastye .main-header-clone .container,
+body.theme-radost .main-header-clone .container,
+body.theme-radost.radost-v2 .main-header-clone .container {
+  width: min(1180px, calc(100% - 2.4rem)) !important;
+  margin-inline: auto !important;
+}
+
+body.page-love .main-header-clone .header-row,
+body.theme-schastye .main-header-clone .header-row,
+body.theme-radost .main-header-clone .header-row,
+body.theme-radost.radost-v2 .main-header-clone .header-row {
+  min-height: 76px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+  grid-template-areas: "nav brand actions" !important;
+  grid-auto-flow: column !important;
+  align-items: center !important;
+  gap: 0.9rem !important;
+  padding: 0 clamp(0.88rem, 2vw, 1.45rem) !important;
+  border-radius: 44px !important;
+  border: 1px solid var(--clone-shell-border) !important;
+  background: var(--clone-shell-bg) !important;
+  box-shadow: var(--clone-shell-shadow) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+body.page-love .main-header-clone .header-row > *,
+body.theme-schastye .main-header-clone .header-row > *,
+body.theme-radost .main-header-clone .header-row > *,
+body.theme-radost.radost-v2 .main-header-clone .header-row > * {
+  align-self: center !important;
+}
+
+body.page-love .main-header-clone .header-row > .site-nav,
+body.theme-schastye .main-header-clone .header-row > .site-nav,
+body.theme-radost .main-header-clone .header-row > .site-nav,
+body.theme-radost.radost-v2 .main-header-clone .header-row > .site-nav {
+  grid-area: nav !important;
+  grid-column: 1 !important;
+  justify-self: start !important;
+  align-self: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.page-love .main-header-clone .site-nav ul,
+body.theme-schastye .main-header-clone .site-nav ul,
+body.theme-radost .main-header-clone .site-nav ul,
+body.theme-radost.radost-v2 .main-header-clone .site-nav ul {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: clamp(0.86rem, 1.2vw, 1.35rem) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+body.page-love .main-header-clone .site-nav a,
+body.theme-schastye .main-header-clone .site-nav a,
+body.theme-radost .main-header-clone .site-nav a,
+body.theme-radost.radost-v2 .main-header-clone .site-nav a {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 34px !important;
+  padding: 0.3rem 0.2rem !important;
+  border-radius: 999px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  color: var(--clone-link) !important;
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.34) !important;
+  overflow: visible !important;
+  transition: color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+body.page-love .main-header-clone .site-nav a:hover,
+body.page-love .main-header-clone .site-nav a:focus-visible,
+body.theme-schastye .main-header-clone .site-nav a:hover,
+body.theme-schastye .main-header-clone .site-nav a:focus-visible,
+body.theme-radost .main-header-clone .site-nav a:hover,
+body.theme-radost .main-header-clone .site-nav a:focus-visible,
+body.theme-radost.radost-v2 .main-header-clone .site-nav a:hover,
+body.theme-radost.radost-v2 .main-header-clone .site-nav a:focus-visible {
+  color: var(--clone-link-hover) !important;
+  background: var(--clone-link-active-bg) !important;
+  border-color: var(--clone-link-active-border) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Keep aria-current for accessibility, but visually it must look like on main. */
+body.page-love .main-header-clone .site-nav a[aria-current="page"],
+body.theme-schastye .main-header-clone .site-nav a[aria-current="page"],
+body.theme-radost .main-header-clone .site-nav a[aria-current="page"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[aria-current="page"] {
+  color: var(--clone-link) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body.page-love .main-header-clone .header-row > .brand,
+body.theme-schastye .main-header-clone .header-row > .brand,
+body.theme-radost .main-header-clone .header-row > .brand,
+body.theme-radost.radost-v2 .main-header-clone .header-row > .brand {
+  grid-area: brand !important;
+  grid-column: 2 !important;
+  justify-self: center !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.06rem !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost.radost-v2 .main-header-clone .brand::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -15px !important;
+  left: 50% !important;
+  width: 36px !important;
+  height: 15px !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(108deg, #fff3cf 0%, #ecc56f 45%, #b97e2c 100%) !important;
+  clip-path: polygon(0 100%, 14% 46%, 30% 100%, 49% 22%, 68% 100%, 84% 46%, 100% 100%) !important;
+  filter: drop-shadow(0 2px 6px rgba(220, 165, 64, 0.45)) !important;
+  pointer-events: none !important;
+}
+
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::after,
+body.theme-radost.radost-v2 .main-header-clone .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big,
+body.theme-radost.radost-v2 .main-header-clone .brand-big {
+  order: 2 !important;
+  font-size: 32px !important;
+  line-height: 0.98 !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 700 !important;
+  color: transparent !important;
+  background: linear-gradient(108deg, #fff8e7 0%, #f0cc76 32%, #deab53 55%, #ffebba 78%, #d1943e 100%) !important;
+  background-size: 220% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  text-shadow: 0 6px 24px rgba(232, 180, 84, 0.28) !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small,
+body.theme-radost.radost-v2 .main-header-clone .brand-small {
+  order: 3 !important;
+  margin-top: 2px !important;
+  font-size: 10px !important;
+  line-height: 1.06 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: lowercase !important;
+  color: transparent !important;
+  background: linear-gradient(104deg, #f8e7b9 0%, #e5bc62 45%, #b87a2a 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .header-row > .header-actions,
+body.theme-schastye .main-header-clone .header-row > .header-actions,
+body.theme-radost .main-header-clone .header-row > .header-actions,
+body.theme-radost.radost-v2 .main-header-clone .header-row > .header-actions {
+  grid-area: actions !important;
+  grid-column: 3 !important;
+  justify-self: end !important;
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+
+body.page-love .main-header-clone .header-row > .menu-toggle,
+body.theme-schastye .main-header-clone .header-row > .menu-toggle,
+body.theme-radost .main-header-clone .header-row > .menu-toggle,
+body.theme-radost.radost-v2 .main-header-clone .header-row > .menu-toggle {
+  grid-column: 3 !important;
+  justify-self: end !important;
+  position: absolute !important;
+  right: clamp(0.88rem, 2vw, 1.45rem) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+body.page-love .main-header-clone .menu-toggle,
+body.theme-schastye .main-header-clone .menu-toggle,
+body.theme-radost .main-header-clone .menu-toggle,
+body.theme-radost.radost-v2 .main-header-clone .menu-toggle {
+  display: none !important;
+  color: var(--clone-link) !important;
+  background: rgba(255, 247, 236, 0.12) !important;
+  border-color: rgba(255, 216, 151, 0.34) !important;
+}
+
+body.page-love .main-header-clone .header-actions .btn-primary,
+body.theme-schastye .main-header-clone .header-actions .btn-primary,
+body.theme-radost .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v2 .main-header-clone .header-actions .btn-primary {
+  min-height: 44px !important;
+  padding: 0.74rem 1.2rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 215, 101, 0.56) !important;
+  color: var(--clone-cta-text) !important;
+  background: var(--clone-cta-bg) !important;
+  box-shadow:
+    0 12px 28px rgba(20, 12, 7, 0.28),
+    inset 0 0 0 1px rgba(255, 247, 220, 0.24) !important;
+}
+
+body.page-love .main-header-clone .header-actions .btn-primary:hover,
+body.theme-schastye .main-header-clone .header-actions .btn-primary:hover,
+body.theme-radost .main-header-clone .header-actions .btn-primary:hover,
+body.theme-radost.radost-v2 .main-header-clone .header-actions .btn-primary:hover {
+  color: #18263f !important;
+  transform: translateY(-1px) !important;
+  box-shadow:
+    0 15px 32px rgba(18, 11, 7, 0.34),
+    inset 0 0 0 1px rgba(255, 247, 220, 0.3) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone,
+  body.theme-schastye .main-header-clone,
+  body.theme-radost .main-header-clone,
+  body.theme-radost.radost-v2 .main-header-clone {
+    top: 0 !important;
+  }
+
+  body.page-love .main-header-clone .header-row,
+  body.theme-schastye .main-header-clone .header-row,
+  body.theme-radost .main-header-clone .header-row,
+  body.theme-radost.radost-v2 .main-header-clone .header-row {
+    display: flex !important;
+    min-height: 72px !important;
+    border-radius: 0 0 24px 24px !important;
+    padding-inline: 0.92rem !important;
+    gap: 0.74rem !important;
+    grid-template-areas: none !important;
+  }
+
+  body.page-love .main-header-clone .menu-toggle,
+  body.theme-schastye .main-header-clone .menu-toggle,
+  body.theme-radost .main-header-clone .menu-toggle,
+  body.theme-radost.radost-v2 .main-header-clone .menu-toggle {
+    display: inline-flex !important;
+    position: static !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  body.page-love .main-header-clone .header-actions .btn,
+  body.theme-schastye .main-header-clone .header-actions .btn,
+  body.theme-radost .main-header-clone .header-actions .btn,
+  body.theme-radost.radost-v2 .main-header-clone .header-actions .btn {
+    display: none !important;
+  }
+
+  body.page-love .main-header-clone .site-nav,
+  body.theme-schastye .main-header-clone .site-nav,
+  body.theme-radost .main-header-clone .site-nav,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    display: none !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--clone-shell-border) !important;
+    background: var(--clone-mobile-bg) !important;
+    box-shadow: 0 12px 26px rgba(8, 11, 20, 0.2) !important;
+    padding: 0.78rem 0.94rem 0.96rem !important;
+  }
+
+  body.page-love .main-header-clone .site-nav.open,
+  body.theme-schastye .main-header-clone .site-nav.open,
+  body.theme-radost .main-header-clone .site-nav.open,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav.open {
+    display: block !important;
+  }
+
+  body.page-love .main-header-clone .site-nav ul,
+  body.theme-schastye .main-header-clone .site-nav ul,
+  body.theme-radost .main-header-clone .site-nav ul,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav ul {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.56rem !important;
+  }
+
+  body.page-love .main-header-clone .site-nav a,
+  body.theme-schastye .main-header-clone .site-nav a,
+  body.theme-radost .main-header-clone .site-nav a,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a {
+    justify-content: flex-start !important;
+    color: #1e2736 !important;
+    text-shadow: none !important;
+    padding: 0.44rem 0.56rem !important;
+  }
+
+  body.page-love .main-header-clone .brand::before,
+  body.theme-schastye .main-header-clone .brand::before,
+  body.theme-radost .main-header-clone .brand::before,
+  body.theme-radost.radost-v2 .main-header-clone .brand::before {
+    width: 30px !important;
+    height: 12px !important;
+    top: -12px !important;
+  }
+
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big,
+  body.theme-radost.radost-v2 .main-header-clone .brand-big {
+    font-size: 24px !important;
+  }
+
+  body.page-love .main-header-clone .brand-small,
+  body.theme-schastye .main-header-clone .brand-small,
+  body.theme-radost .main-header-clone .brand-small,
+  body.theme-radost.radost-v2 .main-header-clone .brand-small {
+    font-size: 9px !important;
+    letter-spacing: 0.1em !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-love .main-header-clone .site-nav a,
+  body.theme-schastye .main-header-clone .site-nav a,
+  body.theme-radost .main-header-clone .site-nav a,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a {
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   LORD Final Logo Swap v3 (inner pages headers)
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand,
+body.theme-radost.radost-v2 .main-header-clone .brand {
+  width: clamp(132px, 14vw, 196px) !important;
+  height: clamp(42px, 4.8vw, 70px) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 0 !important;
+  background: url("../lord/lord-final-2.png") center center / contain no-repeat !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::after,
+body.theme-radost.radost-v2 .main-header-clone .brand::before,
+body.theme-radost.radost-v2 .main-header-clone .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-big,
+body.theme-radost.radost-v2 .main-header-clone .brand-small,
+body.theme-radost.radost-v2 .main-header-clone .brand-big {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand,
+  body.theme-schastye .main-header-clone .brand,
+  body.theme-radost .main-header-clone .brand,
+  body.theme-radost.radost-v2 .main-header-clone .brand {
+    width: 144px !important;
+    height: 48px !important;
+  }
+}
+
+/* ==========================================================================
+   Love Header Beige/Gold Theme v4
+   ========================================================================== */
+body.page-love .main-header-clone {
+  --clone-shell-bg: linear-gradient(118deg, rgba(251, 244, 231, 0.98) 0%, rgba(243, 232, 210, 0.97) 52%, rgba(236, 221, 192, 0.98) 100%);
+  --clone-shell-border: rgba(200, 155, 74, 0.48);
+  --clone-shell-shadow:
+    0 12px 30px rgba(149, 112, 45, 0.18),
+    inset 0 0 0 1px rgba(255, 247, 225, 0.58);
+  --clone-link: #7d5b1f;
+  --clone-link-hover: #6a4715;
+  --clone-link-active-bg: rgba(207, 165, 88, 0.14);
+  --clone-link-active-border: rgba(195, 145, 59, 0.36);
+  --clone-cta-bg: linear-gradient(114deg, #fff6d9 0%, #efcb7b 40%, #cf9634 100%);
+  --clone-cta-text: #4d350e;
+  --clone-mobile-bg: rgba(249, 242, 228, 0.99);
+}
+
+body.page-love .main-header-clone .site-nav a {
+  text-shadow: none !important;
+}
+
+body.page-love .main-header-clone .header-row {
+  backdrop-filter: blur(8px) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .site-nav a {
+    color: #4d3713 !important;
+  }
+}
+
+/* ==========================================================================
+   Love Header Cloud Theme v5 (white noble only on /love)
+   ========================================================================== */
+body.page-love .main-header-clone {
+  --clone-shell-bg: linear-gradient(
+    128deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(251, 248, 241, 0.98) 52%,
+    rgba(246, 240, 230, 0.98) 100%
+  );
+  --clone-shell-border: rgba(214, 185, 128, 0.62);
+  --clone-shell-shadow:
+    0 14px 36px rgba(150, 126, 84, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+  --clone-link: #73501a;
+  --clone-link-hover: #5f3d0f;
+  --clone-link-active-bg: rgba(214, 177, 108, 0.18);
+  --clone-link-active-border: rgba(198, 151, 74, 0.4);
+  --clone-cta-bg: linear-gradient(112deg, #fff7dc 0%, #efcf84 44%, #d49f45 100%);
+  --clone-cta-text: #4a3310;
+  --clone-mobile-bg: rgba(252, 248, 241, 0.99);
+}
+
+body.page-love .main-header-clone .header-row {
+  border-radius: 56px !important;
+  backdrop-filter: blur(10px) saturate(1.06) !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+}
+
+body.page-love .main-header-clone .header-row::before,
+body.page-love .main-header-clone .header-row::after {
+  content: "" !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+body.page-love .main-header-clone .header-row::before {
+  inset: -10px -12px -8px !important;
+  border-radius: 62px !important;
+  background:
+    radial-gradient(36px 26px at 10% 16%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 25% 8%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 41% 6%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 58% 6%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 75% 8%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(36px 26px at 90% 16%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.9 !important;
+}
+
+body.page-love .main-header-clone .header-row::after {
+  inset: -2px !important;
+  border-radius: 56px !important;
+  background: radial-gradient(110% 120% at 50% -30%, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0) 70%);
+  mix-blend-mode: screen !important;
+}
+
+body.page-love .main-header-clone .site-nav a {
+  text-shadow: none !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .header-row {
+    border-radius: 34px !important;
+  }
+
+  body.page-love .main-header-clone .header-row::before {
+    inset: -6px -6px -6px !important;
+    border-radius: 40px !important;
+    background:
+      radial-gradient(28px 18px at 15% 12%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+      radial-gradient(30px 20px at 50% 8%, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0) 100%),
+      radial-gradient(28px 18px at 85% 12%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    opacity: 0.86 !important;
+  }
+
+  body.page-love .main-header-clone .header-row::after {
+    border-radius: 34px !important;
+  }
+}
+
+/* ==========================================================================
+   Header Unified LORD Thin v30 Final Lock
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand,
+body.theme-radost.radost-v2 .main-header-clone .brand,
+body.theme-radost.radost-v3 .main-header-clone .brand,
+body.theme-radost.radost-v4 .main-header-clone .brand {
+  min-height: 56px !important;
+  overflow: visible !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::after,
+body.theme-radost.radost-v2 .main-header-clone .brand::before,
+body.theme-radost.radost-v2 .main-header-clone .brand::after,
+body.theme-radost.radost-v3 .main-header-clone .brand::before,
+body.theme-radost.radost-v3 .main-header-clone .brand::after,
+body.theme-radost.radost-v4 .main-header-clone .brand::before,
+body.theme-radost.radost-v4 .main-header-clone .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small,
+body.theme-radost.radost-v2 .main-header-clone .brand-small,
+body.theme-radost.radost-v3 .main-header-clone .brand-small,
+body.theme-radost.radost-v4 .main-header-clone .brand-small {
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big,
+body.theme-radost.radost-v2 .main-header-clone .brand-big,
+body.theme-radost.radost-v3 .main-header-clone .brand-big,
+body.theme-radost.radost-v4 .main-header-clone .brand-big {
+  display: block !important;
+  order: 1 !important;
+  font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+  font-size: clamp(30px, 2.25vw, 38px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.085em !important;
+  line-height: 1.03 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  color: transparent !important;
+  background: linear-gradient(112deg, #fff2c7 0%, #f8cf57 37%, #f3bc40 65%, #e3a029 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  animation: none !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="schastye"],
+body.theme-schastye .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="schastye"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ffe8aa 0%, #f8cf57 35%, #f2b32d 70%, #ffd876 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="love"],
+body.theme-schastye .main-header-clone .site-nav a[href*="love"],
+body.theme-radost .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="love"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ff9fd0 0%, #ff5fa2 38%, #c11f67 68%, #671530 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="radost"],
+body.theme-schastye .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="radost"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ffd38c 0%, #ffb553 34%, #ff8b2b 67%, #ff6a00 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .header-actions .btn-primary,
+body.theme-schastye .main-header-clone .header-actions .btn-primary,
+body.theme-radost .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v2 .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v3 .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v4 .main-header-clone .header-actions .btn-primary {
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big,
+  body.theme-radost.radost-v2 .main-header-clone .brand-big,
+  body.theme-radost.radost-v3 .main-header-clone .brand-big,
+  body.theme-radost.radost-v4 .main-header-clone .brand-big {
+    font-size: 24px !important;
+    line-height: 1.02 !important;
+    letter-spacing: 0.075em !important;
+  }
+
+  body.page-love .main-header-clone .site-nav a[href*="schastye"],
+  body.page-love .main-header-clone .site-nav a[href*="love"],
+  body.page-love .main-header-clone .site-nav a[href*="radost"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="love"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="radost"] {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile Header Hierarchy Refresh v1
+   - inner pages: by LORD above page title on mobile only
+   ========================================================================== */
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title],
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title],
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title] {
+    position: relative !important;
+    display: inline-flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: calc(100% - 90px) !important;
+    min-height: 48px !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 0.1rem 0 !important;
+    background: none !important;
+    overflow: visible !important;
+    text-align: left !important;
+    line-height: 1 !important;
+  }
+
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title] .brand-small,
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title] .brand-big,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title] .brand-small,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title] .brand-big,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title] .brand-small,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title] .brand-big {
+    display: block !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    transform: none !important;
+    clip-path: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    pointer-events: none !important;
+  }
+
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::before {
+    content: attr(data-brand-kicker) !important;
+    margin: 0 0 0.16rem !important;
+    font-size: clamp(0.56rem, 2vw, 0.72rem) !important;
+    line-height: 1 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    color: transparent !important;
+    background: linear-gradient(112deg, #fff3cf 0%, #f3c95c 44%, #c8882d 100%) !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    content: attr(data-brand-title) !important;
+    margin: 0 !important;
+    font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+    font-size: clamp(1.72rem, 7vw, 2.45rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: 0.03em !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    background: linear-gradient(115deg, #ffbfd9 0%, #ff8fb9 34%, #ff5d9a 64%, #b52f67 100%) !important;
+  }
+
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    background: linear-gradient(112deg, #ffd186 0%, #ffb54f 32%, #ff8a1f 62%, #d95c00 100%) !important;
+  }
+
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    background: linear-gradient(108deg, #fff6b8 0%, #ffe36f 34%, #ffc928 64%, #d89a00 100%) !important;
+  }
+}
+
+/* ==========================================================================
+   Header Unified LORD Thin v30
+   - only LORD in header brand
+   - nav colors by direction
+   - black text for "Связаться"
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand,
+body.theme-radost.radost-v2 .main-header-clone .brand,
+body.theme-radost.radost-v3 .main-header-clone .brand,
+body.theme-radost.radost-v4 .main-header-clone .brand {
+  min-height: 56px !important;
+  overflow: visible !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::after,
+body.theme-radost.radost-v2 .main-header-clone .brand::before,
+body.theme-radost.radost-v2 .main-header-clone .brand::after,
+body.theme-radost.radost-v3 .main-header-clone .brand::before,
+body.theme-radost.radost-v3 .main-header-clone .brand::after,
+body.theme-radost.radost-v4 .main-header-clone .brand::before,
+body.theme-radost.radost-v4 .main-header-clone .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small,
+body.theme-radost.radost-v2 .main-header-clone .brand-small,
+body.theme-radost.radost-v3 .main-header-clone .brand-small,
+body.theme-radost.radost-v4 .main-header-clone .brand-small {
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big,
+body.theme-radost.radost-v2 .main-header-clone .brand-big,
+body.theme-radost.radost-v3 .main-header-clone .brand-big,
+body.theme-radost.radost-v4 .main-header-clone .brand-big {
+  display: block !important;
+  order: 1 !important;
+  font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+  font-size: clamp(30px, 2.25vw, 38px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.085em !important;
+  line-height: 1.03 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  color: transparent !important;
+  background: linear-gradient(112deg, #fff2c7 0%, #f8cf57 37%, #f3bc40 65%, #e3a029 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  animation: none !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="schastye"],
+body.theme-schastye .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="schastye"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ffe8aa 0%, #f8cf57 35%, #f2b32d 70%, #ffd876 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="love"],
+body.theme-schastye .main-header-clone .site-nav a[href*="love"],
+body.theme-radost .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="love"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ff9fd0 0%, #ff5fa2 38%, #c11f67 68%, #671530 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="radost"],
+body.theme-schastye .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="radost"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ffd38c 0%, #ffb553 34%, #ff8b2b 67%, #ff6a00 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .header-actions .btn-primary,
+body.theme-schastye .main-header-clone .header-actions .btn-primary,
+body.theme-radost .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v2 .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v3 .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v4 .main-header-clone .header-actions .btn-primary {
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big,
+  body.theme-radost.radost-v2 .main-header-clone .brand-big,
+  body.theme-radost.radost-v3 .main-header-clone .brand-big,
+  body.theme-radost.radost-v4 .main-header-clone .brand-big {
+    font-size: 24px !important;
+    line-height: 1.02 !important;
+    letter-spacing: 0.075em !important;
+  }
+
+  body.page-love .main-header-clone .site-nav a[href*="schastye"],
+  body.page-love .main-header-clone .site-nav a[href*="love"],
+  body.page-love .main-header-clone .site-nav a[href*="radost"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="love"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="radost"] {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
+
+/* ==========================================================================
+   Header Gold Sync v2 (bright gold)
+   ========================================================================== */
+body.page-love .main-header-clone,
+body.theme-schastye .main-header-clone,
+body.theme-radost .main-header-clone {
+  --clone-shell-border: rgba(251, 188, 54, 0.28);
+  --clone-link: var(--gold-3, #fbbc36);
+  --clone-link-hover: var(--gold-1, #fcce6d);
+  --clone-link-active-bg: rgba(251, 188, 54, 0.14);
+  --clone-link-active-border: rgba(251, 188, 54, 0.38);
+  --clone-cta-bg: var(--gold-gradient, linear-gradient(112deg, #fcce6d 0%, #fbc44f 34%, #fbbc36 68%, #faaf12 100%));
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big {
+  background: var(--gold-gradient, linear-gradient(112deg, #fcce6d 0%, #fbc44f 34%, #fbbc36 68%, #faaf12 100%)) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small {
+  background: var(--gold-gradient, linear-gradient(112deg, #fcce6d 0%, #fbc44f 34%, #fbbc36 68%, #faaf12 100%)) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* ==========================================================================
+   Header Text Unclip Lock v12
+   - keep LORD fully visible on all direction pages
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand {
+  min-height: 58px !important;
+  padding-block: 2px !important;
+  overflow: visible !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big {
+  display: block !important;
+  line-height: 1.16 !important;
+  padding-block: 0.06em !important;
+  overflow: visible !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small {
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand,
+  body.theme-schastye .main-header-clone .brand,
+  body.theme-radost .main-header-clone .brand {
+    min-height: 46px !important;
+  }
+
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big {
+    line-height: 1.15 !important;
+    padding-block: 0.05em !important;
+  }
+}
+
+/* ==========================================================================
+   Global Header Brand + Active Crown v7
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand,
+body.theme-radost.radost-v2 .main-header-clone .brand,
+body.theme-radost.radost-v3 .main-header-clone .brand,
+body.theme-radost.radost-v4 .main-header-clone .brand {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  background: none !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.06rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-decoration: none !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::after,
+body.theme-radost.radost-v2 .main-header-clone .brand::before,
+body.theme-radost.radost-v2 .main-header-clone .brand::after,
+body.theme-radost.radost-v3 .main-header-clone .brand::before,
+body.theme-radost.radost-v3 .main-header-clone .brand::after,
+body.theme-radost.radost-v4 .main-header-clone .brand::before,
+body.theme-radost.radost-v4 .main-header-clone .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small,
+body.theme-radost.radost-v2 .main-header-clone .brand-small,
+body.theme-radost.radost-v3 .main-header-clone .brand-small,
+body.theme-radost.radost-v4 .main-header-clone .brand-small {
+  display: block !important;
+  order: 2 !important;
+  margin-top: 2px !important;
+  font-size: 9px !important;
+  line-height: 1.06 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: none !important;
+  color: transparent !important;
+  background: linear-gradient(104deg, #f7e7b6 0%, #e4bc63 45%, #b87a2a 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  opacity: 1 !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big,
+body.theme-radost.radost-v2 .main-header-clone .brand-big,
+body.theme-radost.radost-v3 .main-header-clone .brand-big,
+body.theme-radost.radost-v4 .main-header-clone .brand-big {
+  display: block !important;
+  order: 1 !important;
+  font-size: clamp(30px, 2.35vw, 44px) !important;
+  line-height: 0.95 !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 800 !important;
+  color: transparent !important;
+  background: linear-gradient(108deg, #fff8e7 0%, #f0cc76 32%, #deab53 55%, #ffebba 78%, #d1943e 100%) !important;
+  background-size: 230% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  text-shadow: 0 6px 24px rgba(232, 180, 84, 0.28) !important;
+  animation: cloneGoldFlow 6.8s ease-in-out infinite !important;
+}
+
+body.page-love .main-header-clone .site-nav li,
+body.theme-schastye .main-header-clone .site-nav li,
+body.theme-radost .main-header-clone .site-nav li,
+body.theme-radost.radost-v2 .main-header-clone .site-nav li,
+body.theme-radost.radost-v3 .main-header-clone .site-nav li,
+body.theme-radost.radost-v4 .main-header-clone .site-nav li {
+  position: relative !important;
+}
+
+body.page-love .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-schastye .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-radost .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-radost.radost-v2 .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-radost.radost-v3 .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-radost.radost-v4 .main-header-clone .site-nav li.is-active-nav::after {
+  content: "👑" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: -16px !important;
+  transform: translateX(-50%) !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  pointer-events: none !important;
+  filter: drop-shadow(0 4px 10px rgba(236, 181, 76, 0.56)) !important;
+  animation: cloneCrownFly 2.35s ease-in-out infinite !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big,
+  body.theme-radost.radost-v2 .main-header-clone .brand-big,
+  body.theme-radost.radost-v3 .main-header-clone .brand-big,
+  body.theme-radost.radost-v4 .main-header-clone .brand-big {
+    font-size: 24px !important;
+  }
+
+  body.page-love .main-header-clone .brand-small,
+  body.theme-schastye .main-header-clone .brand-small,
+  body.theme-radost .main-header-clone .brand-small,
+  body.theme-radost.radost-v2 .main-header-clone .brand-small,
+  body.theme-radost.radost-v3 .main-header-clone .brand-small,
+  body.theme-radost.radost-v4 .main-header-clone .brand-small {
+    font-size: 8px !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  body.page-love .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-schastye .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost.radost-v3 .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost.radost-v4 .main-header-clone .site-nav li.is-active-nav::after {
+    top: -13px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big,
+  body.theme-radost.radost-v2 .main-header-clone .brand-big,
+  body.theme-radost.radost-v3 .main-header-clone .brand-big,
+  body.theme-radost.radost-v4 .main-header-clone .brand-big,
+  body.page-love .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-schastye .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost.radost-v2 .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost.radost-v3 .main-header-clone .site-nav li.is-active-nav::after,
+  body.theme-radost.radost-v4 .main-header-clone .site-nav li.is-active-nav::after {
+    animation: none !important;
+  }
+}
+
+@keyframes cloneCrownFly {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-7px) rotate(8deg);
+  }
+}
+
+@keyframes cloneGoldFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ==========================================================================
+   Header Text Lock v9 (Лорд / Венд-агентство, no clipping, no logo image)
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand {
+  width: auto !important;
+  height: auto !important;
+  min-height: 52px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 2px !important;
+  background: none !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  text-decoration: none !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::after,
+body.page-love .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-schastye .main-header-clone .site-nav li.is-active-nav::after,
+body.theme-radost .main-header-clone .site-nav li.is-active-nav::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big {
+  display: block !important;
+  order: 1 !important;
+  font-size: clamp(27px, 2.05vw, 35px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: 0.03em !important;
+  font-weight: 800 !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  color: transparent !important;
+  background: linear-gradient(108deg, #fff8e7 0%, #f0cc76 32%, #deab53 55%, #ffebba 78%, #d1943e 100%) !important;
+  background-size: 210% 100% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  animation: none !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small {
+  display: block !important;
+  order: 2 !important;
+  margin-top: 1px !important;
+  font-size: 10px !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  color: transparent !important;
+  background: linear-gradient(104deg, #f7e7b6 0%, #e4bc63 45%, #b87a2a 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  opacity: 1 !important;
+}
+
+body.page-love .main-header-clone .header-row,
+body.theme-schastye .main-header-clone .header-row,
+body.theme-radost .main-header-clone .header-row {
+  min-height: 82px !important;
+  overflow: visible !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand,
+  body.theme-schastye .main-header-clone .brand,
+  body.theme-radost .main-header-clone .brand {
+    min-height: 44px !important;
+    gap: 1px !important;
+  }
+
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big {
+    font-size: 23px !important;
+  }
+
+  body.page-love .main-header-clone .brand-small,
+  body.theme-schastye .main-header-clone .brand-small,
+  body.theme-radost .main-header-clone .brand-small {
+    font-size: 8px !important;
+    letter-spacing: 0.07em !important;
+  }
+
+  body.page-love .main-header-clone .header-row,
+  body.theme-schastye .main-header-clone .header-row,
+  body.theme-radost .main-header-clone .header-row {
+    min-height: 72px !important;
+  }
+}
+
+/* ==========================================================================
+   Header Text Stabilizer v10 (LORD + Ивент-агентство)
+   ========================================================================== */
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big {
+  text-transform: uppercase !important;
+  letter-spacing: 0.065em !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small {
+  font-size: clamp(7px, 0.58vw, 8.5px) !important;
+  letter-spacing: 0.055em !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big {
+    font-size: 22px !important;
+  }
+
+  body.page-love .main-header-clone .brand-small,
+  body.theme-schastye .main-header-clone .brand-small,
+  body.theme-radost .main-header-clone .brand-small {
+    font-size: 7px !important;
+    letter-spacing: 0.045em !important;
+  }
+}
+
+/* ==========================================================================
+   Love Header Cloud Shape v11
+   - white noble cloud shell
+   - LORD gold, Ивент-агентство black
+   - no clipping
+   ========================================================================== */
+body.page-love .main-header-clone {
+  --clone-shell-bg: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(251, 248, 241, 0.98) 52%,
+    rgba(246, 240, 230, 0.98) 100%
+  );
+  --clone-shell-border: rgba(214, 185, 128, 0.62);
+  --clone-shell-shadow:
+    0 14px 36px rgba(150, 126, 84, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+  --clone-link: #73501a;
+  --clone-link-hover: #5f3d0f;
+  --clone-link-active-bg: rgba(214, 177, 108, 0.18);
+  --clone-link-active-border: rgba(198, 151, 74, 0.4);
+  --clone-cta-bg: linear-gradient(112deg, #fff7dc 0%, #efcf84 44%, #d49f45 100%);
+  --clone-cta-text: #4a3310;
+  --clone-mobile-bg: rgba(252, 248, 241, 0.99);
+}
+
+body.page-love .main-header-clone .header-row {
+  min-height: 82px !important;
+  border-radius: 56px !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+  backdrop-filter: blur(10px) saturate(1.06) !important;
+}
+
+body.page-love .main-header-clone .header-row::before,
+body.page-love .main-header-clone .header-row::after {
+  content: "" !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+body.page-love .main-header-clone .header-row::before {
+  inset: -10px -12px -8px !important;
+  border-radius: 62px !important;
+  background:
+    radial-gradient(36px 26px at 10% 16%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 25% 8%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 41% 6%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 58% 6%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(44px 30px at 75% 8%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(36px 26px at 90% 16%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.9 !important;
+}
+
+body.page-love .main-header-clone .header-row::after {
+  inset: -2px !important;
+  border-radius: 56px !important;
+  background: radial-gradient(110% 120% at 50% -30%, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0) 70%);
+  mix-blend-mode: screen !important;
+}
+
+body.page-love .main-header-clone .brand {
+  overflow: visible !important;
+}
+
+body.page-love .main-header-clone .brand-big {
+  color: transparent !important;
+  background: linear-gradient(108deg, #fff8e7 0%, #f0cc76 32%, #deab53 55%, #ffebba 78%, #d1943e 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .brand-small {
+  color: #1a1a1a !important;
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .header-row {
+    border-radius: 34px !important;
+  }
+
+  body.page-love .main-header-clone .header-row::before {
+    inset: -6px -6px -6px !important;
+    border-radius: 40px !important;
+  }
+
+  body.page-love .main-header-clone .header-row::after {
+    border-radius: 34px !important;
+  }
+}
+
+/* ==========================================================================
+   Header Unified LORD Thin v30 FINAL (append-last)
+   ========================================================================== */
+body.page-love .main-header-clone .brand,
+body.theme-schastye .main-header-clone .brand,
+body.theme-radost .main-header-clone .brand,
+body.theme-radost.radost-v2 .main-header-clone .brand,
+body.theme-radost.radost-v3 .main-header-clone .brand,
+body.theme-radost.radost-v4 .main-header-clone .brand {
+  min-height: 56px !important;
+  overflow: visible !important;
+}
+
+body.page-love .main-header-clone .brand::before,
+body.page-love .main-header-clone .brand::after,
+body.theme-schastye .main-header-clone .brand::before,
+body.theme-schastye .main-header-clone .brand::after,
+body.theme-radost .main-header-clone .brand::before,
+body.theme-radost .main-header-clone .brand::after,
+body.theme-radost.radost-v2 .main-header-clone .brand::before,
+body.theme-radost.radost-v2 .main-header-clone .brand::after,
+body.theme-radost.radost-v3 .main-header-clone .brand::before,
+body.theme-radost.radost-v3 .main-header-clone .brand::after,
+body.theme-radost.radost-v4 .main-header-clone .brand::before,
+body.theme-radost.radost-v4 .main-header-clone .brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-small,
+body.theme-schastye .main-header-clone .brand-small,
+body.theme-radost .main-header-clone .brand-small,
+body.theme-radost.radost-v2 .main-header-clone .brand-small,
+body.theme-radost.radost-v3 .main-header-clone .brand-small,
+body.theme-radost.radost-v4 .main-header-clone .brand-small {
+  display: none !important;
+}
+
+body.page-love .main-header-clone .brand-big,
+body.theme-schastye .main-header-clone .brand-big,
+body.theme-radost .main-header-clone .brand-big,
+body.theme-radost.radost-v2 .main-header-clone .brand-big,
+body.theme-radost.radost-v3 .main-header-clone .brand-big,
+body.theme-radost.radost-v4 .main-header-clone .brand-big {
+  display: block !important;
+  order: 1 !important;
+  font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+  font-size: clamp(30px, 2.25vw, 38px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.085em !important;
+  line-height: 1.03 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  color: transparent !important;
+  background: linear-gradient(112deg, #fff2c7 0%, #f8cf57 37%, #f3bc40 65%, #e3a029 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  animation: none !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="schastye"],
+body.theme-schastye .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="schastye"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="schastye"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ffe8aa 0%, #f8cf57 35%, #f2b32d 70%, #ffd876 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="love"],
+body.theme-schastye .main-header-clone .site-nav a[href*="love"],
+body.theme-radost .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="love"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="love"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ff9fd0 0%, #ff5fa2 38%, #c11f67 68%, #671530 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .site-nav a[href*="radost"],
+body.theme-schastye .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="radost"],
+body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="radost"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(112deg, #ffd38c 0%, #ffb553 34%, #ff8b2b 67%, #ff6a00 100%) !important;
+  background-size: 220% 220% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+body.page-love .main-header-clone .header-actions .btn-primary,
+body.theme-schastye .main-header-clone .header-actions .btn-primary,
+body.theme-radost .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v2 .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v3 .main-header-clone .header-actions .btn-primary,
+body.theme-radost.radost-v4 .main-header-clone .header-actions .btn-primary {
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+@media (max-width: 760px) {
+  body.page-love .main-header-clone .brand-big,
+  body.theme-schastye .main-header-clone .brand-big,
+  body.theme-radost .main-header-clone .brand-big,
+  body.theme-radost.radost-v2 .main-header-clone .brand-big,
+  body.theme-radost.radost-v3 .main-header-clone .brand-big,
+  body.theme-radost.radost-v4 .main-header-clone .brand-big {
+    font-size: 24px !important;
+    line-height: 1.02 !important;
+    letter-spacing: 0.075em !important;
+  }
+
+  body.page-love .main-header-clone .site-nav a[href*="schastye"],
+  body.page-love .main-header-clone .site-nav a[href*="love"],
+  body.page-love .main-header-clone .site-nav a[href*="radost"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="love"],
+  body.theme-schastye .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v2 .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v3 .main-header-clone .site-nav a[href*="radost"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="schastye"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="love"],
+  body.theme-radost.radost-v4 .main-header-clone .site-nav a[href*="radost"] {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
