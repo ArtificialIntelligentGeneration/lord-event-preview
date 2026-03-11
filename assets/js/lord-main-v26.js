@@ -12,7 +12,6 @@
   const marqueeRec = document.getElementById(MARQUEE_REC_ID);
   const navRec = document.getElementById(MAIN_NAV_ID);
   let marqueeInitialized = false;
-  let ornamentObserver = null;
 
   if (!heroRec || !marqueeRec || !navRec) return;
 

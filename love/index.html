@@ -17,10 +17,12 @@
   <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="../assets/lord/favicon-lord-final-2-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;700;800&family=Prata&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=love-content-79" />
-  <link rel="stylesheet" href="../assets/css/header-main-clone.css?v=header-main-clone-14" />
-  <link rel="stylesheet" href="../assets/css/gold-standard.css?v=gold-std-31" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="../assets/css/tokens.css?v=phase2-1" />
+  <link rel="stylesheet" href="../assets/css/core.css?v=phase4-1" />
+  <link rel="stylesheet" href="../assets/css/pages.css?v=phase4-1" />
   <link rel="preload" as="image" href="../assets/love/hero-love-33-left-heart-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
   <script>
     window.APP_ANALYTICS = { gaMeasurementId: null, yandexCounterId: 107079964 };
@@ -607,8 +609,7 @@
     </div>
   </div>
 
-  <script src="../assets/js/site.js?v=site-mobile-34" defer></script>
-  <script src="../assets/js/love-ui.js?v=love-ui-2" defer></script>
+  <script src="../assets/js/site.js?v=site-phase5-1" defer></script>
   <script>
     const yearNode = document.querySelector("#current-year");
     if (yearNode) yearNode.textContent = String(new Date().getFullYear());

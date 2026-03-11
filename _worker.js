@@ -17,18 +17,21 @@ const ROUTE_DEFINITIONS = [
     aliases: ["/love", "/love/", "/love/index.html"],
     desktop: "/love/index.html",
     mobile: "/love/index.html",
+    mobileAsset: "/love/index.html",
   },
   {
     canonicalPath: "/schastye/",
     aliases: ["/schastye", "/schastye/", "/schastye/index.html"],
     desktop: "/schastye/index.html",
     mobile: "/schastye/index.html",
+    mobileAsset: "/schastye/index.html",
   },
   {
     canonicalPath: "/radost/",
     aliases: ["/radost", "/radost/", "/radost/index.html"],
     desktop: "/radost/index.html",
     mobile: "/radost/index.html",
+    mobileAsset: "/radost/index.html",
   },
 ];
 
@@ -43,6 +46,9 @@ const INTERNAL_MOBILE_REDIRECTS = new Map(
   [
     ...ROUTE_DEFINITIONS.map((route) => [getMobileAssetPath(route), route.canonicalPath]),
     [`${MOBILE_RELEASE_ROOT}/index.html`, "/"],
+    [`${MOBILE_RELEASE_ROOT}/love/index.html`, "/love/"],
+    [`${MOBILE_RELEASE_ROOT}/schastye/index.html`, "/schastye/"],
+    [`${MOBILE_RELEASE_ROOT}/radost/index.html`, "/radost/"],
   ]
 );
 

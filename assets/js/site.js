@@ -461,7 +461,7 @@
 
         let loaderHidden = false;
         let loaderSafetyTimer = 0;
-        const pageMaxWait = 1500;
+        const pageMaxWait = isMobileRuntime ? 800 : 1500;
 
         const hideLoader = () => {
           if (loaderHidden) {
@@ -1056,20 +1056,87 @@
       return;
     }
 
-    doc.querySelectorAll(".tilt").forEach((card) => {
+    doc.querySelectorAll(".tilt, .tilt-card").forEach((card) => {
+      const isTiltCard = card.classList.contains("tilt-card");
+      const perspective = isTiltCard ? 900 : 920;
+      const strength = isTiltCard ? 9 : 7;
+
       card.addEventListener("pointermove", (event) => {
         const rect = card.getBoundingClientRect();
         const x = (event.clientX - rect.left) / rect.width;
         const y = (event.clientY - rect.top) / rect.height;
-        const rotateY = (x - 0.5) * 7;
-        const rotateX = (0.5 - y) * 7;
-        card.style.transform = `perspective(920px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+        const rotateY = (x - 0.5) * strength;
+        const rotateX = (0.5 - y) * strength;
+        card.style.transform = `perspective(${perspective}px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)${isTiltCard ? " translateZ(0)" : ""}`;
       });
 
       card.addEventListener("pointerleave", () => {
         card.style.transform = "";
       });
     });
+  };
+
+  const initLoveEffects = () => {
+    const isLovePage = Boolean(body && body.classList.contains("page-love"));
+    if (!isLovePage) {
+      return;
+    }
+
+    const progress = doc.querySelector("#scroll-progress");
+    if (progress) {
+      const updateScrollProgress = () => {
+        const maxScroll = doc.documentElement.scrollHeight - window.innerHeight;
+        const current = Math.max(0, window.scrollY);
+        const percent = maxScroll > 0 ? (current / maxScroll) * 100 : 0;
+        progress.style.width = `${Math.min(percent, 100)}%`;
+      };
+
+      updateScrollProgress();
+      const scheduleScrollProgress = (() => {
+        let frame = 0;
+        return () => {
+          if (frame) return;
+          frame = window.requestAnimationFrame(() => {
+            frame = 0;
+            updateScrollProgress();
+          });
+        };
+      })();
+
+      window.addEventListener("scroll", scheduleScrollProgress, { passive: true });
+      window.addEventListener("resize", scheduleScrollProgress);
+    }
+
+    const cursorGlow = doc.querySelector("#cursor-glow");
+    if (cursorGlow && hasFinePointer && !prefersReducedMotion) {
+      let targetX = window.innerWidth * 0.5;
+      let targetY = window.innerHeight * 0.5;
+      let currentX = targetX;
+      let currentY = targetY;
+
+      cursorGlow.style.opacity = "1";
+
+      window.addEventListener(
+        "pointermove",
+        (event) => {
+          targetX = event.clientX;
+          targetY = event.clientY;
+        },
+        { passive: true }
+      );
+
+      const animateGlow = () => {
+        currentX += (targetX - currentX) * 0.14;
+        currentY += (targetY - currentY) * 0.14;
+        cursorGlow.style.left = `${currentX.toFixed(2)}px`;
+        cursorGlow.style.top = `${currentY.toFixed(2)}px`;
+        window.requestAnimationFrame(animateGlow);
+      };
+
+      animateGlow();
+    } else if (cursorGlow) {
+      cursorGlow.style.opacity = "0";
+    }
   };
 
   const initScrollableTracks = () => {
@@ -1218,6 +1285,7 @@
     initStickyHeader();
     initScrollableTracks();
     initTrackingListeners();
+    initLoveEffects();
     runWhenIdle(initAnalytics, isMobileRuntime ? 400 : 900);
 
     if (!isMobileRuntime && !safeMode) {
