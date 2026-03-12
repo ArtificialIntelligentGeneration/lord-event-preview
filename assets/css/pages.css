@@ -8301,7 +8301,7 @@ body.theme-radost.radost-v4 .joy-package-card {
   align-content: start !important;
   grid-auto-rows: min-content;
   position: relative !important;
-  overflow: hidden !important;
+  overflow: visible;
 }
 
 body.theme-radost.radost-v4 .joy-package-short {
@@ -8324,7 +8324,7 @@ body.theme-radost.radost-v4 .joy-package-featured {
 }
 
 body.theme-radost.radost-v4 .package-badge {
-  justify-self: start;
+  display: inline-block;
   padding: 0.3rem 0.62rem;
   border-radius: 12px;
   background: linear-gradient(118deg, #fff5c8 0%, #f0cd7a 48%, #cf9230 100%);
@@ -8334,12 +8334,48 @@ body.theme-radost.radost-v4 .package-badge {
   letter-spacing: 0.03em;
   box-shadow: 0 8px 16px rgba(214, 160, 62, 0.28);
   line-height: 1.1;
+  margin-bottom: 0.2rem;
 }
 
 body.theme-radost.radost-v4 .joy-package-standard {
   border-color: rgba(247, 204, 96, 0.72);
   box-shadow: 0 18px 34px rgba(2, 7, 23, 0.58), 0 0 0 1px rgba(247, 204, 96, 0.26) inset;
-  padding-top: 1.22rem !important;
+}
+
+body.theme-radost.radost-v4 .joy-package-details {
+  margin-top: 0.3rem;
+}
+
+body.theme-radost.radost-v4 .joy-package-details summary {
+  cursor: pointer;
+  color: var(--accent-0, #f7cc60);
+  font-weight: 600;
+  font-size: 0.88rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+body.theme-radost.radost-v4 .joy-package-details summary::-webkit-details-marker {
+  display: none;
+}
+
+body.theme-radost.radost-v4 .joy-package-details summary::before {
+  content: "▸";
+  transition: transform 0.2s;
+}
+
+body.theme-radost.radost-v4 .joy-package-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+body.theme-radost.radost-v4 .joy-package-details[open] ul {
+  margin-top: 0.5rem;
+}
+
+body.theme-radost.radost-v4 .joy-package-details .btn {
+  margin-top: 0.7rem;
 }
 
 body.theme-radost.radost-v4 .joy-package-card .btn {
@@ -8356,7 +8392,7 @@ body.theme-radost.radost-v4 .joy-package-card .btn {
 }
 
 body.theme-radost.radost-v4 .joy-package-standard .package-badge {
-  justify-self: end;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -8367,10 +8403,8 @@ body.theme-radost.radost-v4 .joy-package-standard .package-badge {
   letter-spacing: 0.015em;
   text-align: center;
   white-space: nowrap;
-  position: absolute;
-  top: 0.76rem !important;
-  right: 0.76rem !important;
-  margin: 0 !important;
+  position: static;
+  margin: 0 0 0.1rem 0 !important;
   border-radius: 10px !important;
   z-index: 2;
 }
@@ -9434,10 +9468,10 @@ body.theme-radost.radost-v4 .joy-page-shape-16 {
       0 0 0 1px rgba(255, 61, 222, 0.35);
   }
 
-  /* 7.2 — Stack package cards vertically on mobile */
+  /* 7.2 — Compact collapsible package cards on mobile */
   body.theme-radost.radost-v4 .joy-packages {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.7rem;
   }
 
   body.theme-radost.radost-v4 .joy-package-card {
@@ -9445,6 +9479,16 @@ body.theme-radost.radost-v4 .joy-page-shape-16 {
     overflow: visible;
     overflow-wrap: break-word;
     word-break: break-word;
+    padding: 0.85rem 1rem;
+  }
+
+  body.theme-radost.radost-v4 .joy-package-card h3 {
+    font-size: 1.1rem;
+  }
+
+  body.theme-radost.radost-v4 .joy-package-short {
+    font-size: 0.82rem;
+    line-height: 1.35;
   }
 
   /* 7.3 — Larger uppercase "Радость" in hero title */
@@ -9661,6 +9705,12 @@ body.theme-radost.radost-v4 .joy-page-shape-16 {
 
   body.theme-radost.radost-v4 .joy-packages {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  body.theme-radost.radost-v4 .joy-packages {
+    grid-template-columns: 1fr;
   }
 
   body.theme-radost.radost-v4 .joy-wow-grid {
