@@ -1100,7 +1100,7 @@ body.theme-radost.radost-v2 .main-header-clone .brand {
   padding: 0;
   margin: 0;
   gap: 0;
-  background: url("../lord/lord-final-2.png") center center / contain no-repeat;
+  background: none;
 }
 
 body.page-love .main-header-clone .brand::before,
@@ -1459,15 +1459,15 @@ body.theme-radost.radost-v4 .main-header-clone .header-actions .btn-primary {
   }
 
   body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
-    background: linear-gradient(115deg, #ffbfd9 0%, #ff8fb9 34%, #ff5d9a 64%, #b52f67 100%);
+    background-image: linear-gradient(115deg, #ffbfd9 0%, #ff8fb9 34%, #ff5d9a 64%, #b52f67 100%);
   }
 
   body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
-    background: linear-gradient(112deg, #ffd186 0%, #ffb54f 32%, #ff8a1f 62%, #d95c00 100%);
+    background-image: linear-gradient(112deg, #ffd186 0%, #ffb54f 32%, #ff8a1f 62%, #d95c00 100%);
   }
 
   body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
-    background: linear-gradient(108deg, #fff6b8 0%, #ffe36f 34%, #ffc928 64%, #d89a00 100%);
+    background-image: linear-gradient(108deg, #fff6b8 0%, #ffe36f 34%, #ffc928 64%, #d89a00 100%);
   }
 }
 
@@ -2331,4 +2331,266 @@ body.reveal-enabled .reveal.is-visible {
     transform: scale(1.04);
     box-shadow: 0 18px 32px rgba(0, 8, 28, 0.46), 0 0 0 1px rgba(255, 239, 196, 0.24) inset, 0 0 24px rgba(255, 201, 109, 0.35);
   }
+}
+
+/* ==========================================================================
+   Phase 1 — Unified Mobile Header: Liquid Glass + Gold Border
+   All inner pages get identical frosted-glass header, gold outline,
+   page-name branding via pseudo-elements, and standardised menu toggle.
+   ========================================================================== */
+@media (max-width: 760px) {
+
+  /* --- 1a. Header shell — sticky liquid glass with gold border ----------- */
+  body.page-love .main-header-clone,
+  body.theme-schastye .main-header-clone,
+  body.theme-radost .main-header-clone {
+    top: 6px !important;
+    padding-inline: 6px;
+  }
+
+  body.page-love .main-header-clone .header-row,
+  body.theme-schastye .main-header-clone .header-row,
+  body.theme-radost .main-header-clone .header-row {
+    min-height: 56px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+    border-radius: 20px !important;
+    border: 1.5px solid rgba(251, 188, 54, 0.5) !important;
+    background-color: rgba(10, 22, 58, 0.48) !important;
+    background-image:
+      linear-gradient(
+        160deg,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.02) 100%
+      ) !important;
+    box-shadow:
+      0 8px 24px rgba(0, 6, 28, 0.36),
+      inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
+    backdrop-filter: blur(18px) saturate(160%) brightness(1.06) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(160%) brightness(1.06) !important;
+    padding-inline: 14px !important;
+    overflow: visible !important;
+    isolation: isolate;
+  }
+
+  /* Love page: remove cloud-shape pseudo-elements from header-row */
+  body.page-love .main-header-clone .header-row::before,
+  body.page-love .main-header-clone .header-row::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* --- 1b. Brand — show page name via data-attribute pseudo-elements ----- */
+  body.page-love .main-header-clone .brand,
+  body.theme-schastye .main-header-clone .brand,
+  body.theme-radost .main-header-clone .brand {
+    flex: 1 !important;
+    min-height: auto !important;
+    min-width: 0 !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 0.1rem 0 !important;
+    background: none !important;
+    overflow: visible !important;
+    text-align: left !important;
+    line-height: 1 !important;
+  }
+
+  /* Visually hide original span text, keep for a11y */
+  body.page-love .main-header-clone .brand .brand-small,
+  body.page-love .main-header-clone .brand .brand-big,
+  body.theme-schastye .main-header-clone .brand .brand-small,
+  body.theme-schastye .main-header-clone .brand .brand-big,
+  body.theme-radost .main-header-clone .brand .brand-small,
+  body.theme-radost .main-header-clone .brand .brand-big {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  /* Re-enable pseudo-elements (override v30 FINAL "content:none") */
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    transform: none !important;
+    clip-path: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    pointer-events: none !important;
+  }
+
+  /* Kicker line: "by LORD" — small gold text */
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::before,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::before {
+    content: attr(data-brand-kicker) !important;
+    margin: 0 0 0.12rem !important;
+    font-size: 0.56rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background-image: linear-gradient(112deg, #fff3cf 0%, #f3c95c 44%, #c8882d 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  /* Page title: "Любовь" / "Счастье" / "Радость" */
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after,
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    content: attr(data-brand-title) !important;
+    margin: 0 !important;
+    font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+    font-size: 1.55rem !important;
+    line-height: 0.92 !important;
+    letter-spacing: 0.03em !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  body.page-love .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    background-image: linear-gradient(115deg, #ffbfd9 0%, #ff8fb9 34%, #ff5d9a 64%, #b52f67 100%) !important;
+  }
+
+  body.theme-schastye .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    background-image: linear-gradient(108deg, #fff6b8 0%, #ffe36f 34%, #ffc928 64%, #d89a00 100%) !important;
+  }
+
+  body.theme-radost .main-header-clone .brand[data-brand-kicker][data-brand-title]::after {
+    background-image: linear-gradient(112deg, #ffd186 0%, #ffb54f 32%, #ff8a1f 62%, #d95c00 100%) !important;
+  }
+
+  /* --- 1c. Menu toggle — unified medium size, gold-accented -------------- */
+  body.page-love .main-header-clone .menu-toggle,
+  body.theme-schastye .main-header-clone .menu-toggle,
+  body.theme-radost .main-header-clone .menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 40px !important;
+    min-width: 40px !important;
+    padding: 0.4rem 1rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    border-radius: 14px !important;
+    border: 1.5px solid rgba(251, 188, 54, 0.45) !important;
+    background: rgba(255, 247, 236, 0.08) !important;
+    color: var(--lord-gold-100, #fcce6d) !important;
+    -webkit-text-fill-color: var(--lord-gold-100, #fcce6d) !important;
+    backdrop-filter: blur(10px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(140%) !important;
+    box-shadow: 0 4px 14px rgba(0, 6, 28, 0.22) !important;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: static !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin-left: auto;
+  }
+
+  /* --- 1d. Dropdown nav — liquid glass with gold border ------------------- */
+  body.page-love .main-header-clone .site-nav,
+  body.theme-schastye .main-header-clone .site-nav,
+  body.theme-radost .main-header-clone .site-nav {
+    border-radius: 18px !important;
+    border: 1.5px solid rgba(251, 188, 54, 0.45) !important;
+    background-color: rgba(10, 22, 58, 0.6) !important;
+    background-image:
+      linear-gradient(
+        160deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.03) 100%
+      ) !important;
+    box-shadow: 0 12px 32px rgba(0, 6, 28, 0.44) !important;
+    backdrop-filter: blur(20px) saturate(160%) brightness(1.05) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.05) !important;
+    padding: 0.78rem 0.94rem 0.96rem !important;
+  }
+
+  /* Nav links in dropdown: gold on dark glass */
+  body.page-love .main-header-clone .site-nav a,
+  body.theme-schastye .main-header-clone .site-nav a,
+  body.theme-radost .main-header-clone .site-nav a {
+    color: #f5dfa0 !important;
+    -webkit-text-fill-color: #f5dfa0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    text-shadow: none !important;
+    font-size: 0.95rem !important;
+    padding: 0.5rem 0.7rem !important;
+    border-radius: 12px !important;
+    border-color: transparent !important;
+  }
+
+  body.page-love .main-header-clone .site-nav a:hover,
+  body.page-love .main-header-clone .site-nav a:active,
+  body.theme-schastye .main-header-clone .site-nav a:hover,
+  body.theme-schastye .main-header-clone .site-nav a:active,
+  body.theme-radost .main-header-clone .site-nav a:hover,
+  body.theme-radost .main-header-clone .site-nav a:active {
+    background: rgba(251, 188, 54, 0.15) !important;
+    color: #ffe9b1 !important;
+    -webkit-text-fill-color: #ffe9b1 !important;
+  }
+
+  /* Hide desktop-only header actions on mobile */
+  body.page-love .main-header-clone .header-actions,
+  body.theme-schastye .main-header-clone .header-actions,
+  body.theme-radost .main-header-clone .header-actions {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Phase 2 — Remove redundant contact bars, keep only FAB
+   ========================================================================== */
+@media (max-width: 760px) {
+  .mobile-contact-bar,
+  .mobile-contact-bar--joy,
+  .love-mobile-contact-bar {
+    display: none !important;
+  }
+}
+
+/* --- FAB color swap: Schastye → gold/orange, Radost → blue --------------- */
+body.theme-schastye .floating-call-widget--schastye > summary {
+  background: linear-gradient(136deg, rgba(251, 188, 54, 0.96) 0%, rgba(222, 152, 4, 0.96) 50%, rgba(250, 175, 18, 0.96) 100%) !important;
+  border-color: rgba(255, 225, 152, 0.56) !important;
+}
+
+body.theme-radost .floating-call-widget--radost > summary {
+  background: linear-gradient(136deg, rgba(25, 64, 178, 0.96) 0%, rgba(39, 116, 255, 0.96) 40%, rgba(111, 85, 255, 0.92) 100%) !important;
+  border-color: rgba(140, 200, 255, 0.5) !important;
 }

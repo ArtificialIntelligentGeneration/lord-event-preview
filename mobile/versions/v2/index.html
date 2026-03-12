@@ -28,6 +28,23 @@
     fetchpriority="high"
   />
   <link rel="stylesheet" href="/assets/css/lord-rebuild-v1.css?v=lord-mobile-v4-02" />
+  <!-- #region agent log -->
+  <script>
+  window.addEventListener('load',function(){setTimeout(function(){
+    var D=function(loc,msg,data){fetch('http://127.0.0.1:7275/ingest/f3d562e8-e82b-41fa-ab77-3132533a6b9b',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'7aec0c'},body:JSON.stringify({sessionId:'7aec0c',location:loc,message:msg,data:data,timestamp:Date.now()})}).catch(function(){});};
+    var cs=window.getComputedStyle;
+    var isReady=document.body.classList.contains('is-ready');
+    var reveals=document.querySelectorAll('.reveal');
+    var visibleCount=0;for(var i=0;i<reveals.length;i++){var s=cs(reveals[i]);if(parseFloat(s.opacity)>0.5)visibleCount++;}
+    D('main-v2:reveals','H-A reveal state',{isReady:isReady,totalReveals:reveals.length,visibleReveals:visibleCount,bodyClasses:document.body.className});
+    var formBtn=document.querySelector('.lead-form .btn[type="submit"]');
+    if(formBtn){var fb=formBtn.getBoundingClientRect();var fc=document.querySelector('.lead-form');var fr=fc?fc.getBoundingClientRect():null;D('main-v2:form-btn','H-E form button',{btnWidth:fb.width,btnRight:fb.right,formWidth:fr?fr.width:null,formRight:fr?fr.right:null,overflow:fr?(fb.right>fr.right):null});}
+    var header=document.querySelector('.app-header');
+    if(header){var hs=cs(header);D('main-v2:header','H-D header',{bgColor:hs.backgroundColor,backdropFilter:hs.backdropFilter||hs.webkitBackdropFilter,position:hs.position});}
+    D('main-v2:viewport','viewport info',{innerWidth:window.innerWidth,innerHeight:window.innerHeight});
+  },1200);});
+  </script>
+  <!-- #endregion -->
   <script defer src="/assets/js/lord-rebuild-v1.js?v=lord-mobile-v4-02"></script>
   <script type="application/ld+json">
   {
@@ -91,11 +108,6 @@
             <p class="hero-kicker">Санкт-Петербург · Event House</p>
             <h1 class="hero-title">Ивент Агентство «LORD»</h1>
             <p class="hero-subtitle">Мы не предлагаем заказать мероприятия, мы предлагаем заказать СЧАСТЬЕ.</p>
-            <div class="tag-row">
-              <span class="tag">Счастье</span>
-              <span class="tag">Любовь</span>
-              <span class="tag">Радость</span>
-            </div>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#lead-form">Связаться</a>
               <a class="btn btn-secondary" href="#directions">Наши направления</a>
@@ -238,7 +250,7 @@
         <div class="container section-stack">
           <article class="section-card reveal">
             <p class="section-kicker">Команда</p>
-            <h2 class="section-title">Алексей Ширин, Вера Кузьмина и Евгений Уайт</h2>
+            <h2 class="section-title">Алексей Ширин, Вера Кузьмина, Тимофей Сердюков и Евгений Уайт</h2>
           </article>
           <div class="people-grid">
             <article class="team-card reveal">
@@ -248,8 +260,11 @@
               <span class="badge">Директор отдела «Счастье», Организатор</span>
               <h3 class="card-title">Алексей Ширин</h3>
               <p class="card-text">Я превращаю хаос в идеальный порядок. Уже более 10 лет создаю и организую мероприятия, которые запоминаются людям надолго.</p>
-              <p class="card-text">Будь то камерные семинары или масштабные фестивали — моя задача воплотить любую идею в жизнь с точностью и вниманием к деталям.</p>
-              <p class="card-text">Я стремлюсь к развитию, новым вызовам и к тому, чтобы каждая задача превращалась в блестящий результат.</p>
+              <details class="team-more">
+                <summary>Подробнее</summary>
+                <p class="card-text">Будь то камерные семинары или масштабные фестивали — моя задача воплотить любую идею в жизнь с точностью и вниманием к деталям.</p>
+                <p class="card-text">Я стремлюсь к развитию, новым вызовам и к тому, чтобы каждая задача превращалась в блестящий результат.</p>
+              </details>
             </article>
             <article class="team-card reveal">
               <div class="person-photo-wrap">
@@ -258,8 +273,11 @@
               <span class="badge">Директор отдела «Любовь», Ведущая</span>
               <h3 class="card-title">Вера Кузьмина</h3>
               <p class="card-text">Знакомьтесь, моё имя Вера. И со мной у вас будет вера в то, что ваше мероприятие пройдет прекрасно, без неловкостей и форс-мажоров.</p>
-              <p class="card-text">За 15+ лет в event-сфере я провела сотни мероприятий разного формата — от камерных семейных праздников до масштабных торжеств.</p>
-              <p class="card-text">Моя задача — чтобы каждому гостю было комфортно, а заказчики праздника отдыхали, а не переживали.</p>
+              <details class="team-more">
+                <summary>Подробнее</summary>
+                <p class="card-text">За 15+ лет в event-сфере я провела сотни мероприятий разного формата — от камерных семейных праздников до масштабных торжеств.</p>
+                <p class="card-text">Моя задача — чтобы каждому гостю было комфортно, а заказчики праздника отдыхали, а не переживали.</p>
+              </details>
             </article>
             <article class="team-card reveal">
               <div class="person-photo-wrap">
@@ -268,6 +286,11 @@
               <span class="badge">Генеральный продюсер</span>
               <h3 class="card-title">Евгений Уайт</h3>
               <p class="card-text">Здравствуйте, меня зовут Евгений, я люблю людей и люблю создавать не просто события, а воплощать желанные чувства и эмоции, которые перетекают в историю.</p>
+            </article>
+            <article class="team-card reveal">
+              <span class="badge">Ведущий</span>
+              <h3 class="card-title">Тимофей Сердюков</h3>
+              <p class="card-text">Держит темп вечера уверенно и легко, не оставляя залу неловких пауз и провисаний.</p>
             </article>
           </div>
         </div>
@@ -318,20 +341,6 @@
               </div>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <article class="section-card reveal">
-            <p class="section-kicker">Финальный CTA</p>
-            <h2 class="section-title">Почувствуйте и насладитесь моментом !</h2>
-            <p class="section-lead">Оставьте контакт и формат события. Мы свяжемся, уточним задачу и предложим следующий шаг.</p>
-            <div class="inline-actions">
-              <a class="btn btn-primary" href="#lead-form">Связаться</a>
-              <a class="btn btn-secondary" href="https://wa.me/79990633927" target="_blank" rel="noreferrer">WhatsApp</a>
-            </div>
-          </article>
         </div>
       </section>
 

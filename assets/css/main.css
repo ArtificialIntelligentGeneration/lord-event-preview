@@ -128,13 +128,20 @@ body.lord-loading #allrecords {
   background: radial-gradient(circle at 50% 24%, rgba(237, 198, 101, 0.18), transparent 36%), #06153b;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.42s ease, visibility 0.42s ease;
+  filter: blur(0);
+  transform: scale(1);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.9s ease,
+              filter 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lord-v26-loader.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  filter: blur(12px);
+  transform: scale(1.06);
 }
 
 .lord-v26-loader__video,
@@ -213,18 +220,7 @@ body.lord-loading #allrecords {
 }
 
 .lord-v26-loader__ring-head {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 34% 34%, #fff7d9 0%, #ffd56e 40%, #ce9122 100%);
-  box-shadow:
-    0 0 0 1px rgba(255, 236, 180, 0.52),
-    0 0 18px rgba(247, 200, 78, 0.62);
-  transform: translate(-50%, -50%) rotate(calc((var(--loader-progress) * 1turn) - 90deg)) translateY(calc((var(--loader-ring-size) * -0.5) + 8px));
-  transition: transform 90ms linear;
+  display: none;
 }
 
 /* Top progress */
@@ -261,9 +257,11 @@ body.lord-loading #allrecords {
 }
 
 #rec1841231093 .t-menu-base__maincontainer {
-  background: linear-gradient(180deg, rgba(4, 31, 99, 0.96), rgba(3, 24, 81, 0.94)) !important;
+  background: linear-gradient(180deg, rgba(22, 50, 128, 0.58), rgba(34, 42, 112, 0.52)) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
+  backdrop-filter: blur(16px) saturate(150%) !important;
   border: 1px solid rgba(232, 188, 84, 0.58) !important;
-  box-shadow: 0 14px 30px rgba(4, 18, 62, 0.42) !important;
+  box-shadow: 0 14px 30px rgba(4, 18, 62, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
 }
 
 #rec1841231093 .t-btnflex.t-btnflex_type_button {
@@ -363,12 +361,14 @@ body.lord-loading #allrecords {
   overflow: hidden;
   pointer-events: none;
   padding: 70px 0 30px;
+  contain: layout style paint;
 }
 
 #rec1841731213 .lord-v26-marquee__row {
   width: min(1200px, 92vw);
   overflow: hidden;
   margin: 8px 0;
+  display: flex;
 }
 
 #rec1841731213 .lord-v26-marquee__track {
@@ -376,8 +376,11 @@ body.lord-loading #allrecords {
   align-items: center;
   white-space: nowrap;
   gap: 48px;
+  flex-shrink: 0;
   min-width: max-content;
-  transform: translate3d(-50%, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 #rec1841731213 .lord-v26-marquee__text {
@@ -392,23 +395,24 @@ body.lord-loading #allrecords {
   background-clip: text;
   color: transparent;
   animation: lordGoldFlow 6.5s ease-in-out infinite alternate;
+  flex-shrink: 0;
 }
 
 #rec1841731213 .lord-v26-marquee__row[data-speed="slow"] .lord-v26-marquee__track {
-  animation: lordV26MarqueeRight 24s linear infinite;
+  animation: lordV26MarqueeRight 28s linear infinite;
 }
 
 #rec1841731213 .lord-v26-marquee__row[data-speed="mid"] .lord-v26-marquee__track {
-  animation: lordV26MarqueeRight 18s linear infinite;
+  animation: lordV26MarqueeRight 22s linear infinite;
 }
 
 #rec1841731213 .lord-v26-marquee__row[data-speed="fast"] .lord-v26-marquee__track {
-  animation: lordV26MarqueeRight 13s linear infinite;
+  animation: lordV26MarqueeRight 16s linear infinite;
 }
 
 @keyframes lordV26MarqueeRight {
   from {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -688,6 +692,21 @@ body.lord-loading #allrecords {
   #rec1841231093 .t-menu-base.t-menu-base_mobile-left .t-menu-base__buttons,
   #rec1841231093 .t-menu-base.t-menu-base_mobile-left .t-menu-base__button {
     display: none !important;
+  }
+}
+
+/* Fullscreen menu: liquid glass */
+#rec1841231093 .t-menusub__menu--fullscreen {
+  background: linear-gradient(180deg, rgba(10, 28, 80, 0.62), rgba(18, 36, 96, 0.55)) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(145%) !important;
+  backdrop-filter: blur(20px) saturate(145%) !important;
+}
+
+@media screen and (max-width: 960px) {
+  #rec1841231093 .t-menu-base__maincontainer {
+    background: linear-gradient(180deg, rgba(14, 36, 100, 0.55), rgba(22, 40, 108, 0.48)) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
+    backdrop-filter: blur(16px) saturate(150%) !important;
   }
 }
 

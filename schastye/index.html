@@ -765,6 +765,23 @@
     <a class="mobile-contact-btn" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer" data-track="mobile_tg">Telegram</a>
   </div>
 
+  <!-- #region agent log -->
+  <script>
+  window.addEventListener('load',function(){setTimeout(function(){
+    var D=function(loc,msg,data){fetch('http://127.0.0.1:7275/ingest/f3d562e8-e82b-41fa-ab77-3132533a6b9b',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'7aec0c'},body:JSON.stringify({sessionId:'7aec0c',location:loc,message:msg,data:data,timestamp:Date.now()})}).catch(function(){});};
+    var cs=window.getComputedStyle;
+    var hr=document.querySelector('.main-header-clone .header-row');
+    if(hr){var s=cs(hr);D('schastye:header-row','H-B/D header computed',{display:s.display,bgColor:s.backgroundColor,border:s.border,backdropFilter:s.backdropFilter||s.webkitBackdropFilter,borderRadius:s.borderRadius});}
+    var brand=document.querySelector('.main-header-clone .brand[data-brand-kicker][data-brand-title]');
+    if(brand){var ba=cs(brand,'::after');D('schastye:brand-after','H-B brand::after',{content:ba.content,bgImage:ba.backgroundImage,bgClip:ba.backgroundClip||ba.webkitBackgroundClip,display:ba.display});}
+    var fab=document.querySelector('.floating-call-widget');
+    if(fab){var fs=cs(fab);D('schastye:fab','H-C FAB',{display:fs.display});}
+    var mcb=document.querySelector('.mobile-contact-bar');
+    if(mcb){var ms=cs(mcb);D('schastye:contact-bar','H-C contact-bar',{display:ms.display});}
+    D('schastye:viewport','viewport',{innerWidth:window.innerWidth,innerHeight:window.innerHeight,bodyClasses:document.body.className});
+  },800);});
+  </script>
+  <!-- #endregion -->
   <script src="../assets/js/site.js?v=site-phase5-1" defer></script>
 </body>
 </html>

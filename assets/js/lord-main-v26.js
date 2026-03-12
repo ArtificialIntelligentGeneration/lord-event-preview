@@ -81,7 +81,6 @@
       '<circle class="lord-v26-loader__ring-track" cx="60" cy="60" r="48" pathLength="100"></circle>',
       '<circle class="lord-v26-loader__ring-progress" cx="60" cy="60" r="48" pathLength="100"></circle>',
       "</svg>",
-      '<span class="lord-v26-loader__ring-head"></span>',
       "</div>",
       "</div>",
     ].join("");
@@ -193,7 +192,7 @@
     loaderNode.classList.add("is-hidden");
     window.setTimeout(() => {
       if (loaderNode && loaderNode.parentElement) loaderNode.remove();
-    }, 460);
+    }, 960);
   };
 
   const disableMainLoader = () => {
@@ -249,16 +248,30 @@
   };
 
   const setMainImagesEager = () => {
-    const criticalImages = new Set([
-      ...document.querySelectorAll(`#${HERO_REC_ID} img`),
-      ...document.querySelectorAll(`#${MOOD_REC_ID} .t195__img`),
-      ...document.querySelectorAll(`#${MAIN_NAV_ID} img`),
-    ]);
-
-    criticalImages.forEach((img) => {
+    var allImages = document.querySelectorAll("#allrecords img");
+    allImages.forEach(function (img) {
       img.loading = "eager";
       img.decoding = "async";
+    });
+
+    var heroImages = new Set([
+      ...document.querySelectorAll("#" + HERO_REC_ID + " img"),
+      ...document.querySelectorAll("#" + MOOD_REC_ID + " .t195__img"),
+      ...document.querySelectorAll("#" + MAIN_NAV_ID + " img"),
+    ]);
+    heroImages.forEach(function (img) {
       if ("fetchPriority" in img) img.fetchPriority = "high";
+    });
+
+    document.querySelectorAll("#allrecords [data-original]").forEach(function (el) {
+      var src = el.getAttribute("data-original");
+      if (!src) return;
+      if (el.tagName === "IMG") {
+        el.src = src;
+        el.removeAttribute("data-original");
+      } else if (el.style && !el.style.backgroundImage) {
+        el.style.backgroundImage = "url('" + src + "')";
+      }
     });
   };
 
@@ -290,11 +303,11 @@
   const buildMarqueeTrack = (word) => {
     const track = document.createElement("div");
     track.className = "lord-v26-marquee__track";
-    const repeats = window.innerWidth < 768 ? 6 : 10;
+    const repeats = window.innerWidth < 768 ? 8 : 12;
     for (let i = 0; i < repeats; i += 1) {
       const text = document.createElement("span");
       text.className = "lord-v26-marquee__text";
-      text.textContent = `${word} /`;
+      text.textContent = word + " /";
       track.appendChild(text);
     }
     return track;
@@ -316,17 +329,18 @@
     }
 
     const rows = [
-      { word: "Счастье", speed: "slow", tone: "happiness" },
-      { word: "Любовь", speed: "mid", tone: "love" },
-      { word: "Радость", speed: "fast", tone: "joy" },
+      { word: "\u0421\u0447\u0430\u0441\u0442\u044c\u0435", speed: "slow", tone: "happiness" },
+      { word: "\u041b\u044e\u0431\u043e\u0432\u044c", speed: "mid", tone: "love" },
+      { word: "\u0420\u0430\u0434\u043e\u0441\u0442\u044c", speed: "fast", tone: "joy" },
     ];
 
-    rows.forEach(({ word, speed, tone }) => {
-      const row = document.createElement("div");
+    rows.forEach(function (cfg) {
+      var row = document.createElement("div");
       row.className = "lord-v26-marquee__row";
-      row.dataset.speed = speed;
-      row.dataset.tone = tone;
-      row.appendChild(buildMarqueeTrack(word));
+      row.dataset.speed = cfg.speed;
+      row.dataset.tone = cfg.tone;
+      row.appendChild(buildMarqueeTrack(cfg.word));
+      row.appendChild(buildMarqueeTrack(cfg.word));
       host.appendChild(row);
     });
 
@@ -458,6 +472,55 @@
     });
   };
 
+  const addTimofeySerdyukov = () => {
+    const teamRec = document.getElementById("rec1821410343");
+    if (!teamRec) return;
+    if (teamRec.querySelector('[data-team-member="timofey"]')) return;
+
+    const itemsWrapper = teamRec.querySelector(".t-slds__items-wrapper");
+    if (!itemsWrapper) return;
+
+    const existingSlides = itemsWrapper.querySelectorAll(".t-slds__item");
+    const newIndex = existingSlides.length + 1;
+
+    const slide = document.createElement("div");
+    slide.className = "t-slds__item";
+    slide.dataset.slideIndex = String(newIndex);
+    slide.dataset.teamMember = "timofey";
+    slide.setAttribute("aria-label", newIndex + " \u0438\u0437 " + newIndex);
+    slide.innerHTML = [
+      '<div class="t-width t-width_12 t-margin_auto">',
+      '<div class="t-slds__wrapper">',
+      '<div class="t728__wrapper" style="background-color: #3c5fad;">',
+      '<div class="t728__textcell"><div class="t728__textwrapper"><div>',
+      '<div class="t728__text t-text t-text_md">\u0422\u0438\u043c\u043e\u0444\u0435\u0439 \u0421\u0435\u0440\u0434\u044e\u043a\u043e\u0432</div>',
+      '<div class="t728__title t-name t-name_xs">\u0412\u0435\u0434\u0443\u0449\u0438\u0439</div>',
+      '<div class="t728__descr t-descr t-descr_xxs">\u042d\u043d\u0435\u0440\u0433\u0438\u044f, \u0445\u0430\u0440\u0438\u0437\u043c\u0430 \u0438 \u043d\u0435\u0437\u0430\u0431\u044b\u0432\u0430\u0435\u043c\u044b\u0435 \u044d\u043c\u043e\u0446\u0438\u0438 \u043d\u0430 \u043a\u0430\u0436\u0434\u043e\u043c \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0438.</div>',
+      '</div></div></div>',
+      '<div class="t728__imgcell" style="min-height:300px;-webkit-box-flex:0;-webkit-flex:0 0 560px;-ms-flex:0 0 560px;flex:0 0 560px;">',
+      '<div class="t728__bgimg t-bgimg" style="background:linear-gradient(135deg,#2a4080,#3c5fad);"></div>',
+      '</div></div></div></div>',
+    ].join("");
+
+    itemsWrapper.appendChild(slide);
+
+    existingSlides.forEach(function (s) {
+      var label = s.getAttribute("aria-label") || "";
+      var m = label.match(/^(\d+)\s/);
+      if (m) s.setAttribute("aria-label", m[1] + " \u0438\u0437 " + newIndex);
+    });
+
+    var bulletsContainer = teamRec.querySelector(".t-slds__bullets_container");
+    if (bulletsContainer) {
+      var bullet = document.createElement("button");
+      bullet.className = "t-slds__bullet";
+      bullet.dataset.slideIndex = String(newIndex);
+      bullet.setAttribute("aria-label", "\u041f\u0435\u0440\u0435\u0439\u0442\u0438 \u043a \u0441\u043b\u0430\u0439\u0434\u0443 " + newIndex);
+      bullet.innerHTML = '<div class="t-slds__bullet_body" style="width:8px;height:8px;border-radius:100%;background-color:#ccc;"></div>';
+      bulletsContainer.appendChild(bullet);
+    }
+  };
+
   const mergePartnersIntoTeamSlider = () => {
     const teamRec = document.getElementById("rec1821410343");
     const partnersRec = document.getElementById("rec1821410383");
@@ -505,6 +568,7 @@
     disableProblemRevealInTargetBlocks();
     replaceUnderHeroLogo();
     wrapHeroLordWord();
+    addTimofeySerdyukov();
     runNonCritical(() => {
       initMarquee3Rows();
       mergePartnersIntoTeamSlider();
@@ -526,6 +590,7 @@
 
   window.addEventListener("load", () => {
     disableProblemRevealInTargetBlocks();
+    addTimofeySerdyukov();
     runNonCritical(() => {
       initMarquee3Rows();
       mergePartnersIntoTeamSlider();

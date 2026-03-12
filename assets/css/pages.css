@@ -1714,6 +1714,14 @@ body.page-love .love-thumb img {
   z-index: 1;
 }
 
+body.page-love .love-thumb[data-full*="love-set-08"] {
+  aspect-ratio: 16 / 10;
+}
+
+body.page-love .love-thumb[data-full*="love-set-08"] img {
+  object-position: top !important;
+}
+
 body.page-love .love-thumb::after {
   content: "";
   position: absolute;
@@ -1838,9 +1846,14 @@ body.page-love .love-card:hover img {
 }
 
 body.page-love .vera-case-slide img,
-body.page-love .vera-profile-card img,
 body.page-love .vera-cred-card img {
   object-fit: contain !important;
+  background: linear-gradient(150deg, rgba(252, 248, 241, 0.72), rgba(241, 232, 216, 0.62));
+}
+
+body.page-love .vera-profile-card img {
+  object-fit: cover !important;
+  object-position: top center !important;
   background: linear-gradient(150deg, rgba(252, 248, 241, 0.72), rgba(241, 232, 216, 0.62));
 }
 
@@ -2414,6 +2427,7 @@ body.page-love .vera-title {
 body.page-love .vera-title__name {
   display: block;
   font-weight: 700;
+  font-size: clamp(1.5rem, 4.5vw, 2.2rem);
   color: #f6e3a3;
   text-shadow: 0 1px 0 rgba(155, 122, 44, 0.24);
 }
@@ -2888,8 +2902,9 @@ body.page-love #vera .vera-panel-left .vera-profile-card img {
   width: 100% !important;
   height: auto !important;
   max-height: none !important;
-  object-fit: contain !important;
-  object-position: center !important;
+  aspect-ratio: 1;
+  object-fit: cover !important;
+  object-position: top center !important;
   display: block !important;
   border-radius: 16px !important;
 }
@@ -3152,24 +3167,24 @@ body.page-love.reveal-enabled .reveal.is-visible {
   body.page-love .scene::before {
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.48) 0%,
-        rgba(248, 242, 234, 0.4) 48%,
-        rgba(255, 255, 255, 0.72) 100%
+        rgba(255, 230, 240, 0.18) 0%,
+        rgba(255, 220, 235, 0.12) 48%,
+        rgba(255, 245, 248, 0.22) 100%
       ),
       image-set(
         url("../love/hero-love-33-left-heart-mobile.webp") type("image/webp"),
         url("../love/hero-love-33-left-heart-mobile.jpg") type("image/jpeg")
       ) center center / cover no-repeat !important;
-    opacity: 0.9 !important;
-    filter: saturate(1) contrast(1) brightness(1) !important;
+    opacity: 0.94 !important;
+    filter: saturate(1.15) contrast(1.02) brightness(1) !important;
   }
 
   body.page-love .section.section-tight::before {
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.48) 0%,
-        rgba(248, 242, 234, 0.4) 48%,
-        rgba(255, 255, 255, 0.72) 100%
+        rgba(255, 230, 240, 0.18) 0%,
+        rgba(255, 220, 235, 0.12) 48%,
+        rgba(255, 245, 248, 0.22) 100%
       ),
       image-set(
         url("../love/hero-love-33-left-heart-mobile.webp") type("image/webp"),
@@ -3207,7 +3222,7 @@ body.page-love.reveal-enabled .reveal.is-visible {
     height: min(60vh, 460px);
     background-size: cover;
     background-position: center 20%;
-    opacity: 0.58;
+    opacity: 0.94;
   }
 
   .page-love .scene::after {
@@ -3234,7 +3249,8 @@ body.page-love.reveal-enabled .reveal.is-visible {
   body.page-love .scene::before {
     background-position: center top, center top, center top !important;
     background-size: auto, auto, cover !important;
-    opacity: 0.92 !important;
+    opacity: 0.94 !important;
+    filter: saturate(1.15) contrast(1.02) brightness(1) !important;
   }
 
   body.page-love .header-actions-love {
@@ -3284,15 +3300,15 @@ body.page-love.reveal-enabled .reveal.is-visible {
   }
 
   body.page-love .love-mobile-contact-bar {
-    display: flex;
+    display: none;
   }
 
   body.page-love footer {
-    padding-bottom: calc(4.9rem + env(safe-area-inset-bottom));
+    padding-bottom: 1rem;
   }
 
   body.page-love .floating-call-widget {
-    display: none;
+    display: block;
   }
 
   body.page-love .section.section-tight {
@@ -3352,6 +3368,21 @@ body.page-love.reveal-enabled .reveal.is-visible {
   body.page-love .section.section-tight::before,
   body.page-love .section-tight::before {
     background-position: 30% 23% !important;
+  }
+
+  body.page-love p,
+  body.page-love li,
+  body.page-love figcaption,
+  body.page-love .hero-lead,
+  body.page-love .hero-points li,
+  body.page-love .offer-card p,
+  body.page-love .vera-side-description p,
+  body.page-love .vera-case-meta p,
+  body.page-love .vera-cases-intro,
+  body.page-love .process-grid li {
+    hyphens: auto !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
   }
 }
 
@@ -3734,7 +3765,6 @@ body.page-love.reveal-enabled .reveal.is-visible {
   body.page-love .hero-photo img,
   body.page-love .love-card img,
   body.page-love .vera-case-slide img,
-  body.page-love .vera-profile-card img,
   body.page-love .vera-cred-card img {
     height: auto !important;
     object-fit: contain !important;
@@ -3827,10 +3857,12 @@ body.page-love.reveal-enabled .reveal.is-visible {
 
   body.page-love #vera .vera-panel-left .vera-profile-card img {
     width: 100% !important;
-    height: clamp(190px, 50vw, 250px) !important;
-    min-height: 190px !important;
-    max-height: 250px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: 1 !important;
     object-fit: cover !important;
+    object-position: top center !important;
     border-radius: 12px !important;
   }
 
@@ -7023,8 +7055,6 @@ body.theme-schastye.schastye-v4 .page-shell > main {
   margin-top: 0 !important;
 }
 
-body.theme-schastye.schastye-v4 .hero-ball-layer,
-body.theme-schastye.schastye-v4 .hero-ball,
 body.theme-schastye.schastye-v4 .page-shell::before,
 body.theme-schastye.schastye-v4 .page-shell::after {
   display: none !important;
@@ -7411,6 +7441,131 @@ body.theme-schastye.schastye-v4 .section > .container {
 
   body.theme-schastye.schastye-v4 {
     --sch-header-offset: 72px;
+  }
+
+  /* 5.1 — show disco balls on mobile */
+  body.theme-schastye.schastye-v4 .hero-ball-layer {
+    display: block !important;
+  }
+
+  body.theme-schastye.schastye-v4 .hero-ball {
+    display: block !important;
+    animation: none !important;
+    opacity: 0.38;
+  }
+
+  body.theme-schastye.schastye-v4 .hero-ball.hb-1 {
+    width: 44px;
+    height: 44px;
+    left: 5%;
+    top: 14%;
+  }
+
+  body.theme-schastye.schastye-v4 .hero-ball.hb-2 {
+    width: 58px;
+    height: 58px;
+    right: 6%;
+    top: 10%;
+  }
+
+  body.theme-schastye.schastye-v4 .hero-ball.hb-3 {
+    width: 34px;
+    height: 34px;
+    left: 30%;
+    bottom: 16%;
+  }
+
+  body.theme-schastye.schastye-v4 .hero-ball.hb-4 {
+    display: none !important;
+  }
+
+  /* 5.2 + 5.3 + 5.6 — text overflow, min-width, padding */
+  body.theme-schastye.schastye-v4 .trust-card,
+  body.theme-schastye.schastye-v4 .route-card,
+  body.theme-schastye.schastye-v4 .audience-card,
+  body.theme-schastye.schastye-v4 .timeline-step,
+  body.theme-schastye.schastye-v4 .package-card,
+  body.theme-schastye.schastye-v4 .testimonial,
+  body.theme-schastye.schastye-v4 .benefits-list li,
+  body.theme-schastye.schastye-v4 .estimate-item,
+  body.theme-schastye.schastye-v4 .case-card .case-body,
+  body.theme-schastye.schastye-v4 .contact-card {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+  }
+
+  body.theme-schastye.schastye-v4 .trust-card,
+  body.theme-schastye.schastye-v4 .timeline-step {
+    padding: 0.85rem;
+    text-align: center;
+  }
+
+  body.theme-schastye.schastye-v4 .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  body.theme-schastye.schastye-v4 .audience-grid {
+    gap: 0.6rem;
+  }
+
+  body.theme-schastye.schastye-v4 .route-grid-6 {
+    gap: 0.6rem;
+  }
+
+  /* 5.4 + 5.8 — reduce spacing between sections */
+  body.theme-schastye.schastye-v4 .section:not(.hero) {
+    padding-block: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  body.theme-schastye.schastye-v4 .hero + .section {
+    padding-top: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  body.theme-schastye.schastye-v4 .section-title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  body.theme-schastye.schastye-v4 .section-lead {
+    font-size: 0.88rem;
+  }
+
+  body.theme-schastye.schastye-v4 .eyebrow {
+    font-size: 0.76rem;
+  }
+
+  /* 5.5 — improve text visibility (yellow) */
+  body.theme-schastye.schastye-v4 .section-lead,
+  body.theme-schastye.schastye-v4 .route-card p,
+  body.theme-schastye.schastye-v4 .audience-card p,
+  body.theme-schastye.schastye-v4 .trust-label,
+  body.theme-schastye.schastye-v4 .hero-text,
+  body.theme-schastye.schastye-v4 .hero-inline-note {
+    color: var(--pastel-yellow, #f7e7a7);
+  }
+
+  /* 5.7 — case grid: 3 columns instead of vertical stack */
+  body.theme-schastye.schastye-v4 .case-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  body.theme-schastye.schastye-v4 .case-card {
+    min-width: 0;
+  }
+
+  body.theme-schastye.schastye-v4 .case-card .case-body h3 {
+    font-size: 0.72rem;
+  }
+
+  body.theme-schastye.schastye-v4 .case-card .case-body p {
+    font-size: 0.62rem;
+    line-height: 1.3;
+  }
+
+  body.theme-schastye.schastye-v4 .case-card .case-body {
+    padding: 0.35rem 0.3rem;
   }
 }
 
@@ -9264,6 +9419,64 @@ body.theme-radost.radost-v4 .joy-page-shape-16 {
     grid-row: auto;
     aspect-ratio: 4 / 5;
   }
+
+  /* 7.1 — Neon cyan→pink gradient for primary buttons on mobile */
+  body.theme-radost.radost-v4 .btn-primary {
+    background: linear-gradient(90deg, var(--neon-cyan-0), var(--neon-pink-0));
+    border-color: rgba(0, 229, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.25),
+      0 0 0 1px rgba(255, 61, 222, 0.2);
+  }
+
+  body.theme-radost.radost-v4 .btn-primary:hover {
+    border-color: rgba(255, 61, 222, 0.7);
+    box-shadow: 0 12px 28px rgba(0, 229, 255, 0.35),
+      0 0 0 1px rgba(255, 61, 222, 0.35);
+  }
+
+  /* 7.2 — Horizontal scroll for package/tariff cards */
+  body.theme-radost.radost-v4 .joy-packages {
+    grid-template-columns: repeat(3, 75vw);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  body.theme-radost.radost-v4 .joy-package-card {
+    scroll-snap-align: start;
+    min-width: 0;
+  }
+
+  /* 7.3 — Larger uppercase "Радость" in hero title */
+  body.theme-radost.radost-v4 .joy-title .joy-title-accent {
+    font-size: 1.35em;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  /* 7.4 — Format cells: fix text overflow, compact 2-col layout */
+  body.theme-radost.radost-v4 .joy-age-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  body.theme-radost.radost-v4 .joy-age-card {
+    text-align: center;
+    padding: 0.75rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  body.theme-radost.radost-v4 .joy-age-card h3 {
+    font-size: 0.92rem;
+  }
+
+  body.theme-radost.radost-v4 .joy-age-card p {
+    font-size: 0.82rem;
+    margin: 0.3rem 0 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -9597,7 +9810,6 @@ body.theme-radost main img {
   body.theme-schastye.schastye-v4 .sch-aurora-layer,
   body.theme-schastye.schastye-v4 .sch-neon-stream,
   body.theme-schastye.schastye-v4 .sch-grain,
-  body.theme-schastye.schastye-v4 .hero-ball-layer,
   body.theme-radost.radost-v4 .joy-floating-scene,
   body.theme-radost.radost-v4 .joy-magic-cursor {
     display: none !important;

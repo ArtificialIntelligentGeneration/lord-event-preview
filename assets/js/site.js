@@ -4,6 +4,7 @@
   }
   window.__lordSiteRuntimeInitialized = true;
 
+
   const doc = document;
   const root = doc.documentElement;
   const body = doc.body;
