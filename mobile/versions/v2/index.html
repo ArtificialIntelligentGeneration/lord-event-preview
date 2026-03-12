@@ -1,51 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>LORD — ивент-агентство полного цикла</title>
-  <meta
-    name="description"
-    content="LORD — ивент-агентство полного цикла: Счастье, Любовь, Радость. Организация мероприятий под ключ."
-  />
+  <meta name="description" content="LORD — ивент-агентство полного цикла: Счастье, Любовь, Радость. Организация мероприятий под ключ в Санкт-Петербурге." />
   <link rel="canonical" href="https://lord-event.ru/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="LORD — ивент-агентство" />
-  <meta
-    property="og:description"
-    content="Главная страница ивент-агентства LORD. Направления: Счастье, Любовь, Радость."
-  />
+  <meta property="og:description" content="Главная страница ивент-агентства LORD. Направления: Счастье, Любовь, Радость." />
   <meta property="og:url" content="https://lord-event.ru/" />
   <meta property="og:image" content="https://lord-event.ru/assets/lord/hero-first-block-bg-final-mobile.webp" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/lord/favicon-lord-final-2-16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/lord/favicon-lord-final-2-32.png" />
-  <link rel="apple-touch-icon" href="../../../assets/lord/favicon-lord-final-2-192.png" />
-  <link
-    rel="preload"
-    as="image"
-    href="../../../assets/lord/hero-first-block-bg-final-mobile.webp"
-    type="image/webp"
-    fetchpriority="high"
-  />
-  <link rel="stylesheet" href="../../../assets/css/lord-rebuild-v1.css?v=lord-mobile-v4-02" />
-  <!-- #region agent log -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/lord/favicon-lord-final-2-192.png" />
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="../../../assets/lord/favicon-lord-final-2-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../assets/css/tokens.css?v=main-v3" />
+  <link rel="stylesheet" href="../../../assets/css/core.css?v=main-v3" />
+  <link rel="stylesheet" href="../../../assets/css/pages.css?v=main-v3" />
+  <link rel="preload" as="image" href="../../../assets/lord/hero-first-block-bg-final-mobile.webp" type="image/webp" fetchpriority="high" />
   <script>
-  window.addEventListener('load',function(){setTimeout(function(){
-    var D=function(loc,msg,data){fetch('http://127.0.0.1:7275/ingest/f3d562e8-e82b-41fa-ab77-3132533a6b9b',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'7aec0c'},body:JSON.stringify({sessionId:'7aec0c',location:loc,message:msg,data:data,timestamp:Date.now()})}).catch(function(){});};
-    var cs=window.getComputedStyle;
-    var isReady=document.body.classList.contains('is-ready');
-    var reveals=document.querySelectorAll('.reveal');
-    var visibleCount=0;for(var i=0;i<reveals.length;i++){var s=cs(reveals[i]);if(parseFloat(s.opacity)>0.5)visibleCount++;}
-    D('main-v2:reveals','H-A reveal state',{isReady:isReady,totalReveals:reveals.length,visibleReveals:visibleCount,bodyClasses:document.body.className});
-    var formBtn=document.querySelector('.lead-form .btn[type="submit"]');
-    if(formBtn){var fb=formBtn.getBoundingClientRect();var fc=document.querySelector('.lead-form');var fr=fc?fc.getBoundingClientRect():null;D('main-v2:form-btn','H-E form button',{btnWidth:fb.width,btnRight:fb.right,formWidth:fr?fr.width:null,formRight:fr?fr.right:null,overflow:fr?(fb.right>fr.right):null});}
-    var header=document.querySelector('.app-header');
-    if(header){var hs=cs(header);D('main-v2:header','H-D header',{bgColor:hs.backgroundColor,backdropFilter:hs.backdropFilter||hs.webkitBackdropFilter,position:hs.position});}
-    D('main-v2:viewport','viewport info',{innerWidth:window.innerWidth,innerHeight:window.innerHeight});
-  },1200);});
+    window.APP_ANALYTICS = { gaMeasurementId: null, yandexCounterId: 107079964 };
   </script>
-  <!-- #endregion -->
-  <script defer src="../../../assets/js/lord-rebuild-v1.js?v=lord-mobile-v4-02"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,267 +42,278 @@
   }
   </script>
 </head>
-<body class="theme-lord" data-page="main-v2">
-  <div class="app-shell">
-    <header class="app-header">
-      <div class="container header-grid">
-        <a class="brand" href="../../../" aria-label="LORD — главная">
-          <img
-            class="brand-mark"
-            src="../../../assets/lord/favicon-lord-final-2-192.png"
-            alt="LORD"
-            width="44"
-            height="44"
-            loading="eager"
-            decoding="async"
-          />
-          <span class="brand-copy">
-            <span class="brand-kicker">Saint Petersburg Event House</span>
-            <span class="brand-title">LORD</span>
-          </span>
+<body class="page-main" data-page="main">
+
+  <div class="page-shell">
+    <header class="site-header main-header-clone" data-sticky-shell>
+      <div class="container header-row">
+        <a class="brand" href="../../../" data-track="nav_brand" aria-label="LORD — главная" data-brand-kicker="by LORD" data-brand-title="Event House">
+          <span class="brand-small">Ивент-агентство</span>
+          <span class="brand-big">LORD</span>
         </a>
-        <div class="header-side">
-          <div class="header-quick" aria-label="Быстрые контакты">
-            <a class="contact-chip" href="tel:+79990633927">+7 (999) 063-39-27</a>
-            <a class="icon-pill" href="https://wa.me/79990633927" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
-            <a class="icon-pill" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer" aria-label="Telegram">TG</a>
-          </div>
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Меню">Меню</button>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Меню</button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+          <ul>
+            <li class="is-active-nav"><a href="../../../" aria-current="page" data-track="nav_main">Главная</a></li>
+            <li><a href="../../../schastye/" data-track="nav_schastye">Счастье</a></li>
+            <li><a href="../../../love/" data-track="nav_love">Любовь</a></li>
+            <li><a href="../../../radost/" data-track="nav_radost">Радость</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions header-actions-rich">
+          <a class="header-phone" href="tel:+79990633927" data-track="header_phone">8 (999) 063-39-27</a>
+          <a class="header-chat-btn header-chat-wa" href="https://wa.me/79990633927" target="_blank" rel="noreferrer" data-track="header_wa">
+            <span class="header-chat-icon" aria-hidden="true">W</span>
+            <span>WhatsApp</span>
+          </a>
+          <a class="header-chat-btn header-chat-tg" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer" data-track="header_tg">
+            <span class="header-chat-icon" aria-hidden="true">T</span>
+            <span>Telegram</span>
+          </a>
         </div>
       </div>
-      <nav class="app-nav" aria-label="Навигация">
-        <ul>
-          <li><a href="../../../" aria-current="page">Главная</a></li>
-          <li><a href="#directions">Направления</a></li>
-          <li><a href="#team">Команда</a></li>
-          <li><a href="#lead-form">Связаться</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <main class="main-content">
-      <section class="hero" id="top">
+    <main>
+      <section class="section hero main-hero" id="top">
+        <div class="main-hero-bg" aria-hidden="true">
+          <img src="../../../assets/lord/hero-first-block-bg-final-mobile.webp" alt="" width="1080" height="1440" loading="eager" decoding="async" fetchpriority="high" />
+        </div>
         <div class="container hero-grid">
-          <article class="hero-card reveal">
-            <p class="hero-kicker">Санкт-Петербург · Event House</p>
-            <h1 class="hero-title">Ивент Агентство «LORD»</h1>
-            <p class="hero-subtitle">Мы не предлагаем заказать мероприятия, мы предлагаем заказать СЧАСТЬЕ.</p>
+          <div class="reveal">
+            <h1 class="hero-title main-hero-title">
+              <strong class="hero-title-anchor">
+                <small class="hero-title-by-lord">by LORD</small>
+                <span class="hero-title-word">Ивент Агентство</span>
+              </strong>
+              <span class="hero-title-line">«LORD»</span>
+            </h1>
+            <p class="hero-text">Мы не предлагаем заказать мероприятия, мы предлагаем заказать СЧАСТЬЕ. Санкт-Петербург · Event House.</p>
+
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#lead-form">Связаться</a>
-              <a class="btn btn-secondary" href="#directions">Наши направления</a>
+              <a class="btn btn-primary magnetic" href="#form" data-track="main_hero_cta" data-ev="cta_form_hero">Связаться</a>
+              <a class="btn btn-secondary magnetic" href="#directions" data-track="main_hero_directions" data-ev="cta_directions_hero">Наши направления</a>
             </div>
+
             <div class="hero-contact-row">
               <span>Быстрый контакт:</span>
               <a class="inline-link" href="https://wa.me/79990633927" target="_blank" rel="noreferrer">WhatsApp</a>
               <a class="inline-link" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer">Telegram</a>
             </div>
-          </article>
-          <figure class="hero-media reveal">
-            <img
-              src="../../../assets/lord/hero-first-block-bg-final-mobile.webp"
-              alt="LORD — ивент-агентство полного цикла"
-              width="1080"
-              height="1440"
-              sizes="100vw"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </figure>
+          </div>
         </div>
       </section>
 
       <section class="section" id="directions">
-        <div class="container section-stack">
-          <article class="section-card reveal">
-            <p class="section-kicker">Наши направления:</p>
-            <h2 class="section-title">Весь спектор чувств</h2>
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Наши направления</p>
+            <h2 class="section-title">Весь спектр чувств</h2>
             <p class="section-lead">Три направления LORD собирают взрослые события, свадьбы и детские праздники в одном понятном контуре.</p>
-          </article>
-          <div class="card-grid three-up">
-            <article class="direction-card reveal" data-card-link="/schastye/">
-              <span class="badge">Счастье</span>
-              <h3 class="card-title">Счастье</h3>
-              <p class="card-text">Счастье — это взрослые события.</p>
-              <p class="card-text">Дни рождения и юбилеи, корпоративы и тимбилдинги, частные вечеринки, камерные ужины, презентации, встречи друзей и коллег.</p>
-              <div class="card-actions">
+          </div>
+
+          <div class="main-directions-grid">
+            <article class="main-direction-card reveal" data-direction="schastye">
+              <div class="main-direction-badge">Счастье</div>
+              <h3>Счастье</h3>
+              <p>Счастье — это взрослые события.</p>
+              <p>Дни рождения и юбилеи, корпоративы и тимбилдинги, частные вечеринки, камерные ужины, презентации, встречи друзей и коллег.</p>
+              <div class="main-direction-actions">
                 <a class="btn btn-secondary" href="../../../schastye/">Открыть направление</a>
-                <button class="btn btn-primary" type="button" data-format-pick="Счастье" data-form-target="#lead-form">Связаться</button>
+                <a class="btn btn-primary" href="#form">Связаться</a>
               </div>
             </article>
-            <article class="direction-card reveal" data-card-link="/radost/">
-              <span class="badge">Радость</span>
-              <h3 class="card-title">Радость</h3>
-              <p class="card-text">Радость — это мир детского смеха, игр и настоящего волшебства.</p>
-              <p class="card-text">Дни рождения, анимационные программы, квесты, шоу, мастер-классы, семейные праздники и выездные мероприятия.</p>
-              <p class="card-text">Мы делаем праздники, которые дети проживают с восторгом, а родители — со спокойствием, зная, что всё продумано, безопасно и с любовью.</p>
-              <div class="card-actions">
+
+            <article class="main-direction-card reveal" data-direction="radost">
+              <div class="main-direction-badge">Радость</div>
+              <h3>Радость</h3>
+              <p>Радость — это мир детского смеха, игр и настоящего волшебства.</p>
+              <p>Дни рождения, анимационные программы, квесты, шоу, мастер-классы, семейные праздники и выездные мероприятия.</p>
+              <p>Мы делаем праздники, которые дети проживают с восторгом, а родители — со спокойствием.</p>
+              <div class="main-direction-actions">
                 <a class="btn btn-secondary" href="../../../radost/">Открыть направление</a>
-                <button class="btn btn-primary" type="button" data-format-pick="Радость" data-form-target="#lead-form">Связаться</button>
+                <a class="btn btn-primary" href="#form">Связаться</a>
               </div>
             </article>
-            <article class="direction-card reveal" data-card-link="/love/">
-              <span class="badge">Любовь</span>
-              <h3 class="card-title">Любовь</h3>
-              <p class="card-text">Любовь — это события про чувства и близость.</p>
-              <p class="card-text">Свадьбы и камерные церемонии, love story, романтические ужины на двоих, предложения руки и сердца, сюрпризы и особенные даты.</p>
-              <p class="card-text">Мы бережно создаём моменты, в которых важна каждая деталь, каждое слово и каждое прикосновение.</p>
-              <div class="card-actions">
+
+            <article class="main-direction-card reveal" data-direction="love">
+              <div class="main-direction-badge">Любовь</div>
+              <h3>Любовь</h3>
+              <p>Любовь — это события про чувства и близость.</p>
+              <p>Свадьбы и камерные церемонии, love story, романтические ужины на двоих, предложения руки и сердца, сюрпризы и особенные даты.</p>
+              <p>Мы бережно создаём моменты, в которых важна каждая деталь.</p>
+              <div class="main-direction-actions">
                 <a class="btn btn-secondary" href="../../../love/">Открыть направление</a>
-                <button class="btn btn-primary" type="button" data-format-pick="Любовь" data-form-target="#lead-form">Связаться</button>
+                <a class="btn btn-primary" href="#form">Связаться</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container section-stack">
-          <article class="section-card reveal">
-            <p class="section-kicker">Что мы делаем ?</p>
-            <h2 class="section-title">Мы делаем то, что любим, И любим то, что делаем .</h2>
-          </article>
-          <div class="two-up">
-            <article class="reason-card reveal">
-              <h3 class="card-title">Организация без лишней суеты</h3>
-              <p class="card-text">За каждым событием стоит чёткая система: тайминг, команда, подрядчики и контроль деталей.</p>
-              <p class="card-text">Мы берём на себя организацию целиком — от идеи до финального аккорда, чтобы Вы могли быть гостем на собственном празднике, а не координатором процессов.</p>
-              <p class="card-text">Спокойствие и ощущение счастья заказчика в день мероприятия — наш главный показатель качества.</p>
+      <section class="section" id="what-we-do">
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Что мы делаем?</p>
+            <h2 class="section-title">Мы делаем то, что любим, и любим то, что делаем.</h2>
+          </div>
+
+          <div class="main-reasons-grid">
+            <article class="main-reason-card reveal">
+              <h3>Организация без лишней суеты</h3>
+              <p>За каждым событием стоит чёткая система: тайминг, команда, подрядчики и контроль деталей.</p>
+              <p>Мы берём на себя организацию целиком — от идеи до финального аккорда, чтобы Вы могли быть гостем на собственном празднике, а не координатором процессов.</p>
+              <p>Спокойствие и ощущение счастья заказчика в день мероприятия — наш главный показатель качества.</p>
             </article>
-            <article class="reason-card reveal">
-              <h3 class="card-title">Сначала смысл, потом программа</h3>
-              <p class="card-text">Мы создаем мероприятия, где людям спокойно, радостно и по-настоящему хорошо.</p>
-              <p class="card-text">Для нас важны не только сценарий, свет и музыка, но и то, что Вы чувствуете.</p>
-              <p class="card-text">Именно поэтому каждый праздник мы начинаем с диалога — чтобы понять смысл, настроение и ожидания, а не просто «собрать программу».</p>
+
+            <article class="main-reason-card reveal">
+              <h3>Сначала смысл, потом программа</h3>
+              <p>Мы создаем мероприятия, где людям спокойно, радостно и по-настоящему хорошо.</p>
+              <p>Для нас важны не только сценарий, свет и музыка, но и то, что Вы чувствуете.</p>
+              <p>Именно поэтому каждый праздник мы начинаем с диалога — чтобы понять смысл, настроение и ожидания.</p>
             </article>
           </div>
-          <div class="stats-grid">
-            <article class="kpi-card reveal">
-              <span class="kpi-value">0</span>
-              <span class="kpi-label">Стресса и суеты.</span>
-            </article>
-            <article class="kpi-card reveal">
-              <span class="kpi-value">1000+</span>
-              <span class="kpi-label">Довольных клиентов.</span>
-            </article>
-            <article class="kpi-card reveal">
-              <span class="kpi-value">100%</span>
-              <span class="kpi-label">Вовлеченность в каждый проект.</span>
-            </article>
+
+          <div class="main-stats-grid reveal">
+            <div class="main-stat-card">
+              <span class="main-stat-value">0</span>
+              <span class="main-stat-label">Стресса и суеты.</span>
+            </div>
+            <div class="main-stat-card">
+              <span class="main-stat-value">1000+</span>
+              <span class="main-stat-label">Довольных клиентов.</span>
+            </div>
+            <div class="main-stat-card">
+              <span class="main-stat-value">100%</span>
+              <span class="main-stat-label">Вовлеченность в каждый проект.</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="memories">
-        <div class="container section-stack">
-          <article class="section-card reveal">
-            <p class="section-kicker">Вспомним</p>
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Вспомним</p>
             <h2 class="section-title">Мы с теплотой вспоминаем каждое из мероприятий</h2>
-          </article>
-          <div class="card-grid three-up">
-            <article class="story-card reveal">
-              <div class="story-photo-wrap">
-                <img class="story-image" src="../../../assets/schastye/sch-09.jpg" alt="Счастье — взрослые события LORD" width="1200" height="900" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="main-stories-grid">
+            <article class="main-story-card reveal">
+              <div class="main-story-photo">
+                <img src="../../../assets/schastye/sch-09.jpg" alt="Счастье — взрослые события LORD" width="1200" height="900" loading="lazy" decoding="async" />
               </div>
-              <span class="badge">Счастье</span>
-              <p class="card-text">Взрослые события, где важны ритм вечера, уважение к гостям и спокойствие заказчика.</p>
+              <div class="main-story-badge">Счастье</div>
+              <p>Взрослые события, где важны ритм вечера, уважение к гостям и спокойствие заказчика.</p>
             </article>
-            <article class="story-card reveal">
-              <div class="story-photo-wrap">
-                <img class="story-image" src="../../../assets/love/love-11.jpg" alt="Любовь — свадьбы и камерные церемонии LORD" width="1200" height="900" loading="lazy" decoding="async" />
+
+            <article class="main-story-card reveal">
+              <div class="main-story-photo">
+                <img src="../../../assets/love/love-11.jpg" alt="Любовь — свадьбы и камерные церемонии LORD" width="1200" height="900" loading="lazy" decoding="async" />
               </div>
-              <span class="badge">Любовь</span>
-              <p class="card-text">Свадьбы, церемонии и личные истории, где каждая деталь работает на чувство и близость.</p>
+              <div class="main-story-badge">Любовь</div>
+              <p>Свадьбы, церемонии и личные истории, где каждая деталь работает на чувство и близость.</p>
             </article>
-            <article class="story-card reveal">
-              <div class="story-photo-wrap">
-                <img class="story-image" src="../../../assets/radost/rad-09.jpg" alt="Радость — детские праздники LORD" width="1200" height="900" loading="lazy" decoding="async" />
+
+            <article class="main-story-card reveal">
+              <div class="main-story-photo">
+                <img src="../../../assets/radost/rad-09.jpg" alt="Радость — детские праздники LORD" width="1200" height="900" loading="lazy" decoding="async" />
               </div>
-              <span class="badge">Радость</span>
-              <p class="card-text">Детские праздники, в которых родители могут спокойно наблюдать за магией, а не держать всё на себе.</p>
+              <div class="main-story-badge">Радость</div>
+              <p>Детские праздники, в которых родители могут спокойно наблюдать за магией.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section class="section" id="team">
-        <div class="container section-stack">
-          <article class="section-card reveal">
-            <p class="section-kicker">Команда</p>
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Команда</p>
             <h2 class="section-title">Алексей Ширин, Вера Кузьмина, Тимофей Сердюков и Евгений Уайт</h2>
-          </article>
-          <div class="people-grid">
-            <article class="team-card reveal">
-              <div class="person-photo-wrap">
-                <img class="person-photo" src="../../../assets/schastye/alexey-shirin.jpg" alt="Алексей Ширин" width="900" height="1100" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="main-team-grid">
+            <article class="main-team-card reveal">
+              <div class="main-team-photo">
+                <img src="../../../assets/schastye/alexey-shirin.jpg" alt="Алексей Ширин" width="900" height="1100" loading="lazy" decoding="async" />
               </div>
-              <span class="badge">Директор отдела «Счастье», Организатор</span>
-              <h3 class="card-title">Алексей Ширин</h3>
-              <p class="card-text">Я превращаю хаос в идеальный порядок. Уже более 10 лет создаю и организую мероприятия, которые запоминаются людям надолго.</p>
-              <details class="team-more">
+              <div class="main-team-badge">Директор отдела «Счастье», Организатор</div>
+              <h3>Алексей Ширин</h3>
+              <p>Я превращаю хаос в идеальный порядок. Уже более 10 лет создаю и организую мероприятия, которые запоминаются людям надолго.</p>
+              <details class="main-team-more">
                 <summary>Подробнее</summary>
-                <p class="card-text">Будь то камерные семинары или масштабные фестивали — моя задача воплотить любую идею в жизнь с точностью и вниманием к деталям.</p>
-                <p class="card-text">Я стремлюсь к развитию, новым вызовам и к тому, чтобы каждая задача превращалась в блестящий результат.</p>
+                <p>Будь то камерные семинары или масштабные фестивали — моя задача воплотить любую идею в жизнь с точностью и вниманием к деталям.</p>
+                <p>Я стремлюсь к развитию, новым вызовам и к тому, чтобы каждая задача превращалась в блестящий результат.</p>
               </details>
             </article>
-            <article class="team-card reveal">
-              <div class="person-photo-wrap">
-                <img class="person-photo" src="../../../assets/love/vera-portrait-bw.webp" alt="Вера Кузьмина" width="900" height="1200" loading="lazy" decoding="async" />
+
+            <article class="main-team-card reveal">
+              <div class="main-team-photo">
+                <img src="../../../assets/love/vera-portrait-bw.webp" alt="Вера Кузьмина" width="900" height="1200" loading="lazy" decoding="async" />
               </div>
-              <span class="badge">Директор отдела «Любовь», Ведущая</span>
-              <h3 class="card-title">Вера Кузьмина</h3>
-              <p class="card-text">Знакомьтесь, моё имя Вера. И со мной у вас будет вера в то, что ваше мероприятие пройдет прекрасно, без неловкостей и форс-мажоров.</p>
-              <details class="team-more">
+              <div class="main-team-badge">Директор отдела «Любовь», Ведущая</div>
+              <h3>Вера Кузьмина</h3>
+              <p>Знакомьтесь, моё имя Вера. И со мной у вас будет вера в то, что ваше мероприятие пройдет прекрасно, без неловкостей и форс-мажоров.</p>
+              <details class="main-team-more">
                 <summary>Подробнее</summary>
-                <p class="card-text">За 15+ лет в event-сфере я провела сотни мероприятий разного формата — от камерных семейных праздников до масштабных торжеств.</p>
-                <p class="card-text">Моя задача — чтобы каждому гостю было комфортно, а заказчики праздника отдыхали, а не переживали.</p>
+                <p>За 15+ лет в event-сфере я провела сотни мероприятий разного формата — от камерных семейных праздников до масштабных торжеств.</p>
+                <p>Моя задача — чтобы каждому гостю было комфортно, а заказчики праздника отдыхали, а не переживали.</p>
               </details>
             </article>
-            <article class="team-card reveal">
-              <div class="person-photo-wrap">
-                <img class="person-photo" src="../../../assets/lord/lord-final-2.png" alt="Евгений Уайт" width="1200" height="1200" loading="lazy" decoding="async" />
+
+            <article class="main-team-card reveal">
+              <div class="main-team-photo">
+                <img src="../../../assets/lord/lord-final-2.png" alt="Евгений Уайт" width="1200" height="1200" loading="lazy" decoding="async" />
               </div>
-              <span class="badge">Генеральный продюсер</span>
-              <h3 class="card-title">Евгений Уайт</h3>
-              <p class="card-text">Здравствуйте, меня зовут Евгений, я люблю людей и люблю создавать не просто события, а воплощать желанные чувства и эмоции, которые перетекают в историю.</p>
+              <div class="main-team-badge">Генеральный продюсер</div>
+              <h3>Евгений Уайт</h3>
+              <p>Здравствуйте, меня зовут Евгений, я люблю людей и люблю создавать не просто события, а воплощать желанные чувства и эмоции, которые перетекают в историю.</p>
             </article>
-            <article class="team-card reveal">
-              <span class="badge">Ведущий</span>
-              <h3 class="card-title">Тимофей Сердюков</h3>
-              <p class="card-text">Держит темп вечера уверенно и легко, не оставляя залу неловких пауз и провисаний.</p>
+
+            <article class="main-team-card reveal">
+              <div class="main-team-badge">Ведущий</div>
+              <h3>Тимофей Сердюков</h3>
+              <p>Держит темп вечера уверенно и легко, не оставляя залу неловких пауз и провисаний.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container section-stack">
-          <article class="section-card reveal">
-            <p class="section-kicker">Состав проекта</p>
-            <h2 class="section-title">есть все, что нужно</h2>
-          </article>
-          <div class="card-grid three-up">
-            <article class="package-card reveal">
-              <span class="badge">Люди</span>
-              <h3 class="card-title">от 5000/ч</h3>
-              <p class="card-text">Люди, которые отвечают за атмосферу, подачу и ощущение уровня в событии.</p>
+      <section class="section" id="packages">
+        <div class="container">
+          <div class="reveal">
+            <p class="eyebrow">Состав проекта</p>
+            <h2 class="section-title">Есть все, что нужно</h2>
+          </div>
+
+          <div class="main-packages-grid">
+            <article class="main-package-card reveal">
+              <div class="main-package-badge">Люди</div>
+              <h3>от 5 000 ₽/ч</h3>
+              <p>Люди, которые отвечают за атмосферу, подачу и ощущение уровня в событии.</p>
             </article>
-            <article class="package-card reveal">
-              <span class="badge">Персонал</span>
-              <h3 class="card-title">Закажите у нас :</h3>
-              <ul class="bullet-list">
+
+            <article class="main-package-card reveal">
+              <div class="main-package-badge">Персонал</div>
+              <h3>Закажите у нас:</h3>
+              <ul>
                 <li>Ведущих</li>
                 <li>Диджеев</li>
                 <li>Музыкантов</li>
                 <li>Организаторов</li>
               </ul>
             </article>
-            <article class="package-card reveal">
-              <span class="badge">Услуги</span>
-              <h3 class="card-title">ОТ 10000/ услуга</h3>
-              <ul class="bullet-list">
+
+            <article class="main-package-card reveal">
+              <div class="main-package-badge">Услуги</div>
+              <h3>от 10 000 ₽/услуга</h3>
+              <ul>
                 <li>Организация мероприятия</li>
-                <li>Организация мероприятий на английском</li>
+                <li>Организация на английском</li>
                 <li>Сценарий</li>
                 <li>Декорации</li>
                 <li>Съемка, монтаж</li>
@@ -331,103 +321,125 @@
                 <li>Фотозоны</li>
               </ul>
             </article>
-            <article class="package-card reveal">
-              <span class="badge">Все и сразу</span>
-              <h3 class="card-title">Все под ключ</h3>
-              <p class="card-text">ОТ 15000/ мероприятие</p>
-              <p class="card-text">Один контур под ключ: идея, команда, организация, сервис и финальная сборка проекта.</p>
-              <div class="card-actions">
-                <a class="btn btn-primary" href="#lead-form">Заказать</a>
+
+            <article class="main-package-card main-package-card--accent reveal">
+              <div class="main-package-badge">Все и сразу</div>
+              <h3>Все под ключ</h3>
+              <p class="main-package-price">от 15 000 ₽/мероприятие</p>
+              <p>Один контур под ключ: идея, команда, организация, сервис и финальная сборка проекта.</p>
+              <div class="main-package-cta">
+                <a class="btn btn-primary" href="#form">Заказать</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="lead-form">
-        <div class="container contact-grid">
-          <article class="form-card reveal">
-            <p class="section-kicker">Оставить заявку</p>
-            <h2 class="form-title">Оставьте свои данные и мы свяжемся с вами !</h2>
-            <p class="form-text">Напишите направление, формат или просто задачу. Мы подскажем маршрут и следующий шаг по подготовке.</p>
-            <form class="lead-form" data-lead-form data-endpoint="/api/lead" novalidate>
-              <input type="hidden" name="direction" value="main" />
-              <div class="form-grid two">
-                <div class="field">
-                  <label for="main-v2-name">Имя</label>
-                  <input id="main-v2-name" name="name" type="text" placeholder="Как к вам обращаться?" autocomplete="name" />
+      <section class="section" id="form">
+        <div class="container">
+          <div class="main-form-grid">
+            <article class="main-form-card reveal">
+              <p class="eyebrow">Оставить заявку</p>
+              <h2 class="section-title">Оставьте свои данные и мы свяжемся с вами!</h2>
+              <p class="main-form-lead">Напишите направление, формат или просто задачу. Мы подскажем маршрут и следующий шаг по подготовке.</p>
+              <form class="main-lead-form" data-lead-form data-endpoint="/api/lead" novalidate>
+                <input type="hidden" name="direction" value="main" />
+                <div class="main-form-row">
+                  <label>
+                    Имя
+                    <input type="text" name="name" placeholder="Как к вам обращаться?" autocomplete="name" />
+                  </label>
+                  <label>
+                    Контакт
+                    <input type="text" name="contact" placeholder="Телефон, Telegram или WhatsApp" autocomplete="tel" />
+                  </label>
                 </div>
-                <div class="field">
-                  <label for="main-v2-contact">Контакт</label>
-                  <input id="main-v2-contact" name="contact" type="text" placeholder="Телефон, Telegram или WhatsApp" autocomplete="tel" />
-                </div>
+                <label>
+                  Формат
+                  <select name="format">
+                    <option value="">Счастье / Любовь / Радость / не знаю</option>
+                    <option value="Счастье">Счастье</option>
+                    <option value="Любовь">Любовь</option>
+                    <option value="Радость">Радость</option>
+                    <option value="Не уверен">Пока не уверен</option>
+                  </select>
+                </label>
+                <label>
+                  Комментарий
+                  <textarea name="message" placeholder="Дата, количество гостей, повод, пожелания"></textarea>
+                </label>
+                <button class="btn btn-primary" type="submit" data-track="form_submit_click" data-ev="form_submit">Связаться</button>
+                <p class="form-note">Контакты используем только для связи по вашему запросу.</p>
+                <p class="form-status" aria-live="polite"></p>
+              </form>
+            </article>
+
+            <article class="main-contact-card reveal">
+              <p class="eyebrow">Быстрый путь</p>
+              <h2 class="section-title">Можно написать сразу</h2>
+              <p class="main-form-lead">Если удобнее не заполнять форму, мы на связи в Telegram, WhatsApp и по телефону.</p>
+              <div class="main-contact-actions">
+                <a class="btn btn-primary" href="https://wa.me/79990633927" target="_blank" rel="noreferrer">WhatsApp</a>
+                <a class="btn btn-secondary" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer">Telegram</a>
               </div>
-              <div class="field">
-                <label for="main-v2-format">Формат</label>
-                <select id="main-v2-format" name="format">
-                  <option value="">Счастье / Любовь / Радость / не знаю</option>
-                  <option value="Счастье">Счастье</option>
-                  <option value="Любовь">Любовь</option>
-                  <option value="Радость">Радость</option>
-                  <option value="Не уверен">Пока не уверен</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="main-v2-message">Комментарий</label>
-                <textarea id="main-v2-message" name="message" placeholder="Дата, количество гостей, повод, пожелания"></textarea>
-              </div>
-              <div class="form-actions">
-                <button class="btn btn-primary" type="submit">Связаться</button>
-              </div>
-              <p class="form-note">Контакты используем только для связи по вашему запросу.</p>
-            </form>
-          </article>
-          <article class="contact-card reveal">
-            <p class="section-kicker">Быстрый путь</p>
-            <h2 class="form-title">Можно написать сразу</h2>
-            <p class="form-text">Если удобнее не заполнять форму, мы на связи в Telegram, WhatsApp и по телефону.</p>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="https://wa.me/79990633927" target="_blank" rel="noreferrer">WhatsApp</a>
-              <a class="btn btn-secondary" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer">Telegram</a>
-            </div>
-            <ul class="contact-list">
-              <li><a class="contact-link" href="tel:+79990633927">+7 (999) 063-39-27</a></li>
-              <li><a class="contact-link" href="mailto:power19g@gmail.com">power19g@gmail.com</a></li>
-              <li><span>Санкт-Петербург и выездные проекты</span></li>
-            </ul>
-          </article>
+              <ul class="main-contact-list">
+                <li><a href="tel:+79990633927">+7 (999) 063-39-27</a></li>
+                <li><a href="mailto:power19g@gmail.com">power19g@gmail.com</a></li>
+                <li><span>Санкт-Петербург и выездные проекты</span></li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <article class="section-card reveal">
-          <p class="section-kicker">LORD</p>
-          <h2 class="footer-title">Счастье, Любовь, Радость</h2>
-          <p class="footer-text">Один бренд, три направления и один стандарт: чувство, порядок и красивый результат без лишней суеты для клиента.</p>
-        </article>
-        <article class="section-card reveal">
-          <div class="contact-list">
-            <a class="contact-link" href="#directions">Наши направления</a>
-            <a class="contact-link" href="../../../schastye/">Счастье</a>
-            <a class="contact-link" href="../../../love/">Любовь</a>
-            <a class="contact-link" href="../../../radost/">Радость</a>
-            <a class="contact-link" href="tel:+79990633927">+7 (999) 063-39-27</a>
-            <a class="contact-link" href="mailto:power19g@gmail.com">power19g@gmail.com</a>
+    <footer class="page-footer" id="footer">
+      <div class="container footer-row footer-row-contacts">
+        <div class="footer-contact-wrap">
+          <h3 class="footer-title">Счастье, Любовь, Радость</h3>
+          <p class="footer-lead">Один бренд, три направления и один стандарт: чувство, порядок и красивый результат без лишней суеты для клиента.</p>
+          <div class="footer-contacts-inline">
+            <a href="tel:+79990633927">8 (999) 063-39-27</a>
+            <a href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="https://wa.me/79990633927" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="mailto:power19g@gmail.com">power19g@gmail.com</a>
           </div>
-          <p class="footer-note">© <span data-year></span> LORD</p>
-        </article>
+        </div>
+
+        <nav class="footer-links" aria-label="Ссылки футера">
+          <a href="../../../">Главная</a>
+          <a href="../../../schastye/">Счастье</a>
+          <a href="../../../love/">Любовь</a>
+          <a href="../../../radost/">Радость</a>
+          <a href="#form">Заявка</a>
+        </nav>
+      </div>
+      <div class="container">
+        <p class="footer-copy">© <span data-year></span> LORD, Санкт-Петербург</p>
       </div>
     </footer>
+  </div>
 
-    <div class="sticky-dock" aria-label="Быстрые действия">
-      <div class="sticky-dock-grid">
-        <a class="btn btn-primary" href="#lead-form">Связаться</a>
-        <a class="btn btn-secondary" href="https://wa.me/79990633927" target="_blank" rel="noreferrer">WhatsApp</a>
-        <a class="btn btn-secondary" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer">Telegram</a>
+  <details class="floating-call-widget floating-call-widget--lord" aria-label="Виджет звонка LORD">
+    <summary aria-label="Открыть быстрые контакты LORD">
+      <span class="floating-call-widget__icon" aria-hidden="true">☎</span>
+    </summary>
+    <div class="floating-call-widget__panel">
+      <p class="floating-call-widget__title">LORD • быстрая связь</p>
+      <a class="floating-call-widget__phone" href="tel:+79990633927" data-track="main_widget_phone">8 (999) 063-39-27</a>
+      <div class="floating-call-widget__actions">
+        <a class="floating-call-widget__action action-tg" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer" data-track="main_widget_tg">Telegram</a>
+        <a class="floating-call-widget__action action-wa" href="https://wa.me/79990633927" target="_blank" rel="noreferrer" data-track="main_widget_wa">WhatsApp</a>
+        <a class="floating-call-widget__action action-call" href="tel:+79990633927" data-track="main_widget_call">Позвонить</a>
       </div>
     </div>
+  </details>
+
+  <div class="mobile-contact-bar" aria-label="Быстрые контакты">
+    <a class="mobile-contact-btn" href="https://wa.me/79990633927" target="_blank" rel="noreferrer" data-track="mobile_wa">WhatsApp</a>
+    <a class="mobile-contact-btn" href="https://t.me/Alex_Shirin" target="_blank" rel="noreferrer" data-track="mobile_tg">Telegram</a>
   </div>
+
+  <script src="../../../assets/js/site.js?v=main-v3" defer></script>
 </body>
 </html>

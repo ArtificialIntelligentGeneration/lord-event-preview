@@ -35,6 +35,7 @@
 }
 
 /* Shared gold contract for custom pages */
+body.page-main,
 body.page-love,
 body.theme-schastye,
 body.theme-radost {
@@ -48,6 +49,7 @@ body.theme-radost {
   --gold-glow-strong: var(--lord-gold-glow-strong);
 }
 
+body.page-main .main-header-clone,
 body.page-love .main-header-clone,
 body.theme-schastye .main-header-clone,
 body.theme-radost .main-header-clone {
@@ -70,6 +72,17 @@ body.theme-radost .main-header-clone {
   --lord-liquid-shadow: 0 14px 34px rgba(5, 10, 32, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
+body.page-main :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
 body.page-love :where(
   [class*="-card"],
   [class*="-note"],
@@ -117,6 +130,13 @@ body.theme-radost :where(
   -webkit-backdrop-filter: blur(14px) saturate(145%);
 }
 
+body.page-main :where(
+  .btn,
+  details.write-menu > summary,
+  .menu-toggle,
+  .t-btn,
+  .t-btnflex.t-btnflex_type_button
+),
 body.page-love :where(
   .btn,
   details.write-menu > summary,
@@ -150,6 +170,14 @@ body.theme-radost :where(
   -webkit-backdrop-filter: blur(14px) saturate(145%);
 }
 
+body.page-main :where(
+  [class*="-frame"],
+  [class*="-photo"],
+  [class*="-media"],
+  .section-photo,
+  .case-media,
+  .alexey-project-shot
+),
 body.page-love :where(
   [class*="-frame"],
   [class*="-photo"],
@@ -209,6 +237,15 @@ body.theme-radost :where(
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body.page-main :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn
+  ),
   body.page-love :where(
     [class*="-card"],
     [class*="-note"],
@@ -258,6 +295,17 @@ body.theme-radost :where(
   --lord-liquid-fallback-soft: rgba(18, 28, 64, 0.58);
 }
 
+body.page-main :where(
+  [class*="-card"],
+  [class*="-note"],
+  .quick-calc-inline,
+  .write-menu-panel,
+  .header-phone,
+  .header-chat-btn,
+  .hero-messenger-link,
+  .mobile-contact-btn,
+  .main-header-clone .header-row
+),
 body.page-love :where(
   [class*="-card"],
   [class*="-note"],
@@ -304,6 +352,13 @@ body.theme-radost :where(
   -webkit-backdrop-filter: blur(var(--lord-liquid-blur)) saturate(var(--lord-liquid-sat)) brightness(var(--lord-liquid-bright));
 }
 
+body.page-main :where(
+  input,
+  select,
+  textarea,
+  .t-input,
+  .t-inputtext
+),
 body.page-love :where(
   input,
   select,
@@ -332,6 +387,7 @@ body.theme-radost :where(
 }
 
 @media (hover: hover) and (pointer: fine) {
+  body.page-main :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
   body.page-love :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
   body.theme-schastye :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
   body.theme-radost :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn),
@@ -339,6 +395,7 @@ body.theme-radost :where(
     transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   }
 
+  body.page-main :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
   body.page-love :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
   body.theme-schastye :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
   body.theme-radost :where(.btn, .header-chat-btn, .hero-messenger-link, .mobile-contact-btn):hover,
@@ -350,6 +407,17 @@ body.theme-radost :where(
 }
 
 @supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  body.page-main :where(
+    [class*="-card"],
+    [class*="-note"],
+    .quick-calc-inline,
+    .write-menu-panel,
+    .header-phone,
+    .header-chat-btn,
+    .hero-messenger-link,
+    .mobile-contact-btn,
+    .main-header-clone .header-row
+  ),
   body.page-love :where(
     [class*="-card"],
     [class*="-note"],
@@ -393,6 +461,7 @@ body.theme-radost :where(
     background-image: linear-gradient(160deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08)) !important;
   }
 
+  body.page-main :where(input, select, textarea, .t-input, .t-inputtext),
   body.page-love :where(input, select, textarea, .t-input, .t-inputtext),
   body.theme-schastye :where(input, select, textarea, .t-input, .t-inputtext),
   body.theme-radost :where(input, select, textarea, .t-input, .t-inputtext) {
@@ -427,6 +496,7 @@ body.theme-radost :where(
   }
 }
 
+body.page-main,
 body.page-love,
 body.theme-schastye,
 body.theme-radost,
@@ -446,12 +516,14 @@ body.t-body {
   background: transparent !important;
 }
 
+body.page-main :where(.section, .page-footer),
 body.page-love :where(.section, .page-footer),
 body.theme-schastye :where(.section, .page-footer),
 body.theme-radost :where(.section, .page-footer) {
   background-color: transparent !important;
 }
 
+body.page-main :where(.hero::after, .hero-flow-fade),
 body.page-love :where(.hero::after, .hero-flow-fade),
 body.theme-schastye :where(.hero::after, .hero-flow-fade),
 body.theme-radost :where(.joy-hero::after, .joy-hero-flow-fade) {
@@ -460,6 +532,7 @@ body.theme-radost :where(.joy-hero::after, .joy-hero-flow-fade) {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body.page-main,
   body.page-love,
   body.theme-schastye,
   body.theme-radost,
