@@ -9434,18 +9434,17 @@ body.theme-radost.radost-v4 .joy-page-shape-16 {
       0 0 0 1px rgba(255, 61, 222, 0.35);
   }
 
-  /* 7.2 — Horizontal scroll for package/tariff cards */
+  /* 7.2 — Stack package cards vertically on mobile */
   body.theme-radost.radost-v4 .joy-packages {
-    grid-template-columns: repeat(3, 75vw);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   body.theme-radost.radost-v4 .joy-package-card {
-    scroll-snap-align: start;
     min-width: 0;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   /* 7.3 — Larger uppercase "Радость" in hero title */
